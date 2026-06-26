@@ -1,0 +1,47 @@
+{
+  "pageHeader": {
+    "title": "Research",
+    "subtitle": "Academic Scholarship on the Mahabharata",
+    "description": "A repository of peer-reviewed research papers, journal articles, book chapters, and conference presentations on Mahabharata studies."
+  },
+  "categories": [
+    {
+      "id": "all",
+      "label": "All Research"
+    },
+    {
+      "id": "textual-criticism",
+      "label": "Textual Criticism"
+    },
+    {
+      "id": "philosophy",
+      "label": "Philosophy & Ethics"
+    },
+    {
+      "id": "history",
+      "label": "History & Chronology"
+    },
+    {
+      "id": "gender-studies",
+      "label": "Gender Studies"
+    },
+    {
+      "id": "comparative-studies",
+      "label": "Comparative Studies"
+    },
+    {
+      "id": "geography",
+      "label": "Historical Geography"
+    }
+  ],
+  "stats": {
+    "totalPapers": 52,
+    "totalDownloads": 105000,
+    "totalCitations": 2580
+  },
+  "seo": {
+    "title": "Mahabharata Research Papers | Varun Gupta",
+    "description": "Browse scholarly research papers and publications by Varun Gupta on the Mahabharata — textual criticism, philosophy, history, gender studies, and more.",
+    "ogImage": "/images/og/research.jpg"
+  }
+}

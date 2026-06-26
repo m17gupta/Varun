@@ -1,0 +1,103 @@
+{
+  "pageHeader": {
+    "title": "Podcast",
+    "subtitle": "The Mahabharata Dialogues",
+    "description": "A podcast series exploring the depths of the Mahabharata through scholarly conversations, narrative explorations, and philosophical reflections."
+  },
+  "podcastInfo": {
+    "title": "The Mahabharata Dialogues",
+    "description": "Join Varun Gupta as he engages with fellow scholars, researchers, and enthusiasts in thoughtful conversations about the Mahabharata. Each episode explores a different aspect of the epic — from textual analysis to philosophical inquiry, from character studies to contemporary relevance.",
+    "coverImage": "/images/podcast/cover.jpg",
+    "host": "Varun Gupta",
+    "frequency": "Bi-weekly",
+    "platforms": [
+      {
+        "name": "Apple Podcasts",
+        "url": "https://podcasts.apple.com/podcast/example",
+        "icon": "apple-podcasts"
+      },
+      {
+        "name": "Spotify",
+        "url": "https://open.spotify.com/show/example",
+        "icon": "spotify"
+      },
+      {
+        "name": "Google Podcasts",
+        "url": "https://podcasts.google.com/feed/example",
+        "icon": "google-podcasts"
+      },
+      {
+        "name": "YouTube",
+        "url": "https://youtube.com/playlist?list=example",
+        "icon": "youtube"
+      },
+      {
+        "name": "Amazon Music",
+        "url": "https://music.amazon.com/podcasts/example",
+        "icon": "amazon-music"
+      }
+    ]
+  },
+  "episodes": [
+    {
+      "id": "ep-001",
+      "title": "Why the Mahabharata Matters Today",
+      "description": "An introductory episode exploring the enduring relevance of the Mahabharata in the 21st century — why this ancient epic continues to captivate and instruct modern audiences.",
+      "episodeNumber": 1,
+      "season": 1,
+      "duration": "42:15",
+      "publishedDate": "2025-01-15",
+      "audioUrl": "https://example.com/podcast/ep001.mp3",
+      "coverImage": "/images/podcast/ep001.jpg"
+    },
+    {
+      "id": "ep-002",
+      "title": "The Character of Krishna: Divine or Human?",
+      "description": "A deep dive into the most enigmatic character of the Mahabharata — Krishna. We explore his roles as diplomat, philosopher, and divine incarnation.",
+      "episodeNumber": 2,
+      "season": 1,
+      "duration": "48:30",
+      "publishedDate": "2025-01-29",
+      "audioUrl": "https://example.com/podcast/ep002.mp3",
+      "coverImage": "/images/podcast/ep002.jpg"
+    },
+    {
+      "id": "ep-003",
+      "title": "Draupadi: The Woman Who Changed the Course of the Epic",
+      "description": "An examination of Draupadi's pivotal role in the Mahabharata — her agency, her suffering, and her defiance that set the stage for the great war.",
+      "episodeNumber": 3,
+      "season": 1,
+      "duration": "52:00",
+      "publishedDate": "2025-02-12",
+      "audioUrl": "https://example.com/podcast/ep003.mp3",
+      "coverImage": "/images/podcast/ep003.jpg"
+    },
+    {
+      "id": "ep-004",
+      "title": "The Concept of Dharma: A Conversation with Dr. Ananya Sharma",
+      "description": "Special guest Dr. Ananya Sharma joins Varun to discuss the philosophical complexities of dharma as presented in the Mahabharata.",
+      "episodeNumber": 4,
+      "season": 1,
+      "duration": "55:45",
+      "publishedDate": "2025-02-26",
+      "audioUrl": "https://example.com/podcast/ep004.mp3",
+      "coverImage": "/images/podcast/ep004.jpg"
+    },
+    {
+      "id": "ep-005",
+      "title": "The Mahabharata War: Historical Evidence and Scholarly Debates",
+      "description": "An exploration of the archaeological, literary, and geographical evidence for the Mahabharata war and the scholarly debates surrounding its historicity.",
+      "episodeNumber": 5,
+      "season": 1,
+      "duration": "50:10",
+      "publishedDate": "2025-03-12",
+      "audioUrl": "https://example.com/podcast/ep005.mp3",
+      "coverImage": "/images/podcast/ep005.jpg"
+    }
+  ],
+  "seo": {
+    "title": "The Mahabharata Dialogues Podcast | Varun Gupta",
+    "description": "Listen to The Mahabharata Dialogues podcast hosted by Varun Gupta — scholarly conversations exploring the epic's narratives, philosophy, and contemporary relevance.",
+    "ogImage": "/images/og/podcast.jpg"
+  }
+}

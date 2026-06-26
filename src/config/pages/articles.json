@@ -1,0 +1,52 @@
+{
+  "pageHeader": {
+    "title": "Articles",
+    "subtitle": "Essays, Analysis & Commentary",
+    "description": "A collection of articles, essays, and analyses exploring the Mahabharata's narratives, philosophy, and contemporary relevance."
+  },
+  "categories": [
+    {
+      "id": "all",
+      "label": "All Articles"
+    },
+    {
+      "id": "philosophy",
+      "label": "Philosophy & Ethics"
+    },
+    {
+      "id": "narrative-analysis",
+      "label": "Narrative Analysis"
+    },
+    {
+      "id": "historical-context",
+      "label": "Historical Context"
+    },
+    {
+      "id": "character-studies",
+      "label": "Character Studies"
+    },
+    {
+      "id": "contemporary-relevance",
+      "label": "Contemporary Relevance"
+    },
+    {
+      "id": "book-reviews",
+      "label": "Book Reviews"
+    }
+  ],
+  "featuredArticle": {
+    "title": "The Dice Game and the Nature of Dharma",
+    "excerpt": "An examination of the pivotal dice game episode in the Mahabharata and what it reveals about the fluid, context-dependent nature of dharma in the epic's moral universe.",
+    "category": "narrative-analysis",
+    "author": "Varun Gupta",
+    "date": "2025-03-15",
+    "readTime": "12 min read",
+    "image": "/images/articles/dice-game.jpg",
+    "url": "/articles/dice-game-dharma"
+  },
+  "seo": {
+    "title": "Articles on Mahabharata | Varun Gupta",
+    "description": "Read articles by Varun Gupta on Mahabharata philosophy, narrative analysis, character studies, historical context, and contemporary relevance.",
+    "ogImage": "/images/og/articles.jpg"
+  }
+}

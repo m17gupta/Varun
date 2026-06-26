@@ -1,0 +1,57 @@
+{
+  "pageHeader": {
+    "title": "Newsletter",
+    "subtitle": "Mahabharata Scholarship Delivered to Your Inbox",
+    "description": "Subscribe to receive regular updates on new research, articles, podcast episodes, speaking engagements, and exclusive content from Varun Gupta."
+  },
+  "signupCta": {
+    "title": "Join the Mahabharata Scholars Circle",
+    "description": "Get monthly updates on publications, upcoming events, curated reading recommendations, and behind-the-scenes insights into Mahabharata research.",
+    "buttonLabel": "Subscribe Free",
+    "placeholder": "Enter your email address",
+    "successMessage": "Thank you for subscribing! Please check your inbox to confirm."
+  },
+  "benefits": [
+    {
+      "title": "Exclusive Research Previews",
+      "description": "Early access to draft papers, book excerpts, and upcoming publication announcements before they are publicly released."
+    },
+    {
+      "title": "Curated Reading Lists",
+      "description": "Monthly recommendations of essential Mahabharata scholarship, rare manuscripts, and noteworthy publications from around the world."
+    },
+    {
+      "title": "Event Invitations",
+      "description": "Priority registration for lectures, workshops, and live Q&A sessions with Varun Gupta."
+    },
+    {
+      "title": "Community Access",
+      "description": "Join a growing community of Mahabharata enthusiasts and scholars for discussions and knowledge exchange."
+    }
+  ],
+  "recentIssues": [
+    {
+      "title": "March 2025: Women of the Mahabharata",
+      "excerpt": "This month explores the women of the Mahabharata — new research perspectives, recommended readings, and an exclusive excerpt from the upcoming book.",
+      "publishedDate": "2025-03-01",
+      "url": "/newsletter/march-2025"
+    },
+    {
+      "title": "February 2025: The Geography of the Epic",
+      "excerpt": "Tracing the rivers, mountains, and kingdoms of the Mahabharata. Plus, a review of recent archaeological findings and a podcast episode highlight.",
+      "publishedDate": "2025-02-01",
+      "url": "/newsletter/february-2025"
+    },
+    {
+      "title": "January 2025: New Year, New Research",
+      "excerpt": "Kicking off the year with exciting research announcements, upcoming course launches, and reflections on the state of Mahabharata studies.",
+      "publishedDate": "2025-01-01",
+      "url": "/newsletter/january-2025"
+    }
+  ],
+  "seo": {
+    "title": "Newsletter | Varun Gupta on Mahabharata",
+    "description": "Subscribe to Varun Gupta's newsletter for monthly updates on Mahabharata research, publications, podcast episodes, and exclusive scholarly content.",
+    "ogImage": "/images/og/newsletter.jpg"
+  }
+}

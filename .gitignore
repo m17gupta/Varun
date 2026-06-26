@@ -39,3 +39,21 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# uploaded files (local storage)
+public/uploads/
+
+# logs
+*.log
+
+# test
+*.tsbuildinfo
+
+# agents
+/.agents

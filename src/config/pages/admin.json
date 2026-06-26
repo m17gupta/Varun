@@ -1,0 +1,80 @@
+{
+  "dashboard": {
+    "title": "Admin Dashboard",
+    "subtitle": "Manage your Mahabharata knowledge platform"
+  },
+  "statsCards": [
+    {
+      "id": "total-members",
+      "label": "Total Members",
+      "value": 2847,
+      "change": 12.5,
+      "changeLabel": "vs last month",
+      "icon": "users",
+      "trend": "up"
+    },
+    {
+      "id": "monthly-revenue",
+      "label": "Monthly Revenue",
+      "value": 12450,
+      "prefix": "$",
+      "change": 8.3,
+      "changeLabel": "vs last month",
+      "icon": "dollar-sign",
+      "trend": "up"
+    },
+    {
+      "id": "content-count",
+      "label": "Total Content",
+      "value": 186,
+      "change": 4,
+      "changeLabel": "new this month",
+      "icon": "file-text",
+      "trend": "up"
+    },
+    {
+      "id": "recent-signups",
+      "label": "New Signups (30 days)",
+      "value": 342,
+      "change": -2.1,
+      "changeLabel": "vs last month",
+      "icon": "user-plus",
+      "trend": "down"
+    }
+  ],
+  "quickActions": [
+    {
+      "id": "new-article",
+      "label": "New Article",
+      "icon": "edit",
+      "href": "/admin/content/new",
+      "description": "Write and publish a new article or research paper"
+    },
+    {
+      "id": "manage-members",
+      "label": "Manage Members",
+      "icon": "users",
+      "href": "/admin/members",
+      "description": "View, edit, and manage member accounts"
+    },
+    {
+      "id": "analytics",
+      "label": "View Analytics",
+      "icon": "bar-chart",
+      "href": "/admin/analytics",
+      "description": "Review platform traffic, engagement, and revenue metrics"
+    },
+    {
+      "id": "content-library",
+      "label": "Content Library",
+      "icon": "book-open",
+      "href": "/admin/content",
+      "description": "Manage all articles, videos, courses, and resources"
+    }
+  ],
+  "seo": {
+    "title": "Admin Dashboard | Varun Gupta",
+    "description": "Admin dashboard for managing the Mahabharata knowledge platform — content, members, analytics, and platform settings.",
+    "ogImage": "/images/og/admin.jpg"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "pageHeader": {
+    "title": "Contact",
+    "subtitle": "Get in Touch",
+    "description": "Have a question, speaking request, or research collaboration idea? I'd love to hear from you."
+  },
+  "email": {
+    "address": "varun@example.com",
+    "label": "Send an Email",
+    "description": "For research inquiries, speaking engagements, and general correspondence."
+  },
+  "socialLinks": [
+    {
+      "platform": "Twitter / X",
+      "handle": "@varungupta",
+      "url": "https://x.com/varungupta",
+      "icon": "twitter"
+    },
+    {
+      "platform": "YouTube",
+      "handle": "Varun Gupta",
+      "url": "https://youtube.com/@varungupta",
+      "icon": "youtube"
+    },
+    {
+      "platform": "LinkedIn",
+      "handle": "Varun Gupta",
+      "url": "https://linkedin.com/in/varungupta",
+      "icon": "linkedin"
+    },
+    {
+      "platform": "Academia.edu",
+      "handle": "Varun Gupta",
+      "url": "https://independent.academia.edu/varungupta",
+      "icon": "academia"
+    }
+  ],
+  "responseTime": {
+    "label": "Typical Response Time",
+    "value": "24-48 hours",
+    "description": "I strive to respond to all inquiries within 1-2 business days."
+  },
+  "seo": {
+    "title": "Contact Varun Gupta | Mahabharata Scholar",
+    "description": "Get in touch with Varun Gupta for research collaboration, speaking engagements, media inquiries, or general questions about Mahabharata scholarship.",
+    "ogImage": "/images/og/contact.jpg"
+  }
+}

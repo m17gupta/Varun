@@ -1,0 +1,134 @@
+{
+  "hero": {
+    "title": "About Varun Gupta",
+    "subtitle": "Mahabharata Researcher, Author & Speaker",
+    "image": "/images/about/hero.jpg",
+    "description": "Dedicated to advancing the scholarly understanding of the Mahabharata and making its wisdom accessible to contemporary audiences worldwide."
+  },
+  "bio": [
+    {
+      "paragraph": "Varun Gupta is a dedicated Mahabharata researcher whose work spans textual criticism, philosophical analysis, and historical investigation of the great Indian epic. With over a decade of focused scholarship, he has contributed significantly to the academic discourse surrounding the Mahabharata's origins, narrative structure, and enduring relevance."
+    },
+    {
+      "paragraph": "His research interests include the critical edition of the Mahabharata, the philosophical frameworks of dharma and karma as presented in the epic, the role of women in the Mahabharata narrative, and the historical geography of the epic's setting. He has published extensively in peer-reviewed journals and presented at international conferences."
+    },
+    {
+      "paragraph": "Beyond academia, Varun is committed to public scholarship — delivering lectures, participating in podcast discussions, and writing for broader audiences to bridge the gap between specialized Indological research and the general public's curiosity about the Mahabharata."
+    },
+    {
+      "paragraph": "He is currently working on a comprehensive study examining the ethical dilemmas faced by characters in the Mahabharata and their parallels to modern leadership challenges, along with a book project on the women of the Mahabharata."
+    }
+  ],
+  "academicBackground": [
+    {
+      "degree": "Ph.D. in Indological Studies",
+      "institution": "University of Delhi",
+      "year": "2020",
+      "description": "Doctoral thesis on the philosophical frameworks of dharma in the critical edition of the Mahabharata."
+    },
+    {
+      "degree": "M.A. in Sanskrit",
+      "institution": "Banaras Hindu University",
+      "year": "2014",
+      "description": "Specialization in classical Sanskrit literature and epic studies."
+    },
+    {
+      "degree": "B.A. (Hons) in History",
+      "institution": "St. Stephen's College, Delhi",
+      "year": "2011",
+      "description": "Ancient Indian history with a focus on the epic period."
+    }
+  ],
+  "researchInterests": [
+    {
+      "title": "Textual Criticism & Philology",
+      "description": "Critical edition studies, manuscript variations, and the transmission history of the Mahabharata text."
+    },
+    {
+      "title": "Philosophical Ethics",
+      "description": "The concept of dharma as a dynamic ethical framework in the Mahabharata."
+    },
+    {
+      "title": "Historical Geography",
+      "description": "Tracing the geographical correlates of places mentioned in the Mahabharata."
+    },
+    {
+      "title": "Gender Studies",
+      "description": "The representation and agency of women characters in the epic narrative."
+    },
+    {
+      "title": "Comparative Mythology",
+      "description": "Parallels between the Mahabharata and other world epics and mythologies."
+    },
+    {
+      "title": "Contemporary Relevance",
+      "description": "Applying the ethical and philosophical lessons of the Mahabharata to modern contexts."
+    }
+  ],
+  "selectedWorks": [
+    {
+      "title": "The Mahabharata: A Modern Reader's Companion",
+      "type": "Book",
+      "year": 2024,
+      "publisher": "Academic Press India",
+      "description": "A comprehensive guide navigating the epic's narrative, characters, and philosophical themes.",
+      "url": "/books/mahabharata-companion"
+    },
+    {
+      "title": "Dharma in Dialogue: Ethical Frameworks from the Mahabharata",
+      "type": "Book",
+      "year": 2025,
+      "publisher": "Oxford University Press India",
+      "description": "An exploration of ethical debates embedded within the Mahabharata.",
+      "url": "/books/dharma-in-dialogue"
+    },
+    {
+      "title": "The Concept of Dharma in the Mahabharata: A Critical Re-examination",
+      "type": "Journal Article",
+      "year": 2025,
+      "journal": "Journal of Indian Philosophy",
+      "description": "A re-examination of dharma as a central philosophical concept in the epic.",
+      "url": "/research/dharma-mahabharata"
+    },
+    {
+      "title": "Women in the Mahabharata: Beyond the Silences",
+      "type": "Book Chapter",
+      "year": 2024,
+      "book": "Revisiting the Epic: New Perspectives on the Mahabharata",
+      "description": "An analysis of the roles and representations of women characters.",
+      "url": "/research/women-mahabharata"
+    }
+  ],
+  "socialLinks": [
+    {
+      "platform": "Twitter / X",
+      "url": "https://x.com/varungupta",
+      "icon": "twitter"
+    },
+    {
+      "platform": "YouTube",
+      "url": "https://youtube.com/@varungupta",
+      "icon": "youtube"
+    },
+    {
+      "platform": "LinkedIn",
+      "url": "https://linkedin.com/in/varungupta",
+      "icon": "linkedin"
+    },
+    {
+      "platform": "Academia.edu",
+      "url": "https://independent.academia.edu/varungupta",
+      "icon": "academia"
+    },
+    {
+      "platform": "Google Scholar",
+      "url": "https://scholar.google.com/citations?user=example",
+      "icon": "google-scholar"
+    }
+  ],
+  "seo": {
+    "title": "About Varun Gupta | Mahabharata Researcher, Author & Speaker",
+    "description": "Learn about Varun Gupta's academic background, research interests, publications, and journey as a Mahabharata scholar dedicated to advancing Indological studies.",
+    "ogImage": "/images/og/about.jpg"
+  }
+}

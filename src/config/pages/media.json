@@ -1,0 +1,70 @@
+{
+  "pageHeader": {
+    "title": "Media",
+    "subtitle": "Press Coverage & Media Appearances",
+    "description": "A curated archive of media appearances, press coverage, interviews, and features where Varun Gupta's Mahabharata scholarship has been highlighted."
+  },
+  "appearances": [
+    {
+      "publication": "The Hindu",
+      "title": "Decoding the Mahabharata: A Conversation with Scholar Varun Gupta",
+      "date": "2025-03-10",
+      "url": "https://thehindu.com/example1",
+      "type": "Interview"
+    },
+    {
+      "publication": "BBC Radio 4",
+      "title": "In Our Time: The Mahabharata",
+      "date": "2025-02-18",
+      "url": "https://bbc.co.uk/example2",
+      "type": "Radio Interview"
+    },
+    {
+      "publication": "The Indian Express",
+      "title": "Why the Mahabharata Remains Relevant in the 21st Century",
+      "date": "2025-01-22",
+      "url": "https://indianexpress.com/example3",
+      "type": "Op-Ed"
+    },
+    {
+      "publication": "Outlook India",
+      "title": "The Women of the Mahabharata: New Scholarly Perspectives",
+      "date": "2024-12-05",
+      "url": "https://outlookindia.com/example4",
+      "type": "Feature"
+    },
+    {
+      "publication": "Frontline",
+      "title": "Dharma in the Age of Uncertainty: Reading the Mahabharata Today",
+      "date": "2024-10-15",
+      "url": "https://frontline.thehindu.com/example5",
+      "type": "Essay"
+    },
+    {
+      "publication": "NDTV",
+      "title": "Interview: The Historical Evidence for the Mahabharata",
+      "date": "2024-08-30",
+      "url": "https://ndtv.com/example6",
+      "type": "Television Interview"
+    },
+    {
+      "publication": "Scroll.in",
+      "title": "A Modern Reader's Guide to the Mahabharata",
+      "date": "2024-07-12",
+      "url": "https://scroll.in/example7",
+      "type": "Book Review"
+    },
+    {
+      "publication": "The Wire",
+      "title": "Re-examining the Critical Edition of the Mahabharata",
+      "date": "2024-05-20",
+      "url": "https://thewire.in/example8",
+      "type": "Article"
+    }
+  ],
+  "seo": {
+    "title": "Media Appearances | Varun Gupta",
+    "description": "Browse media coverage, interviews, and press features on Varun Gupta's Mahabharata research — including The Hindu, BBC, NDTV, The Indian Express, and more.",
+    "ogImage": "/images/og/media.jpg"
+  }
+}

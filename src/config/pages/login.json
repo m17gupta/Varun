@@ -1,0 +1,12 @@
+{
+  "pageHeader": {
+    "title": "Sign In",
+    "subtitle": "Welcome back",
+    "description": "Sign in to your account to access exclusive content, manage your membership, and engage with the Mahabharata scholarship community."
+  },
+  "seo": {
+    "title": "Sign In | Varun Gupta",
+    "description": "Sign in to your account on Varun Gupta's Mahabharata knowledge platform to access exclusive research, courses, and community features.",
+    "ogImage": "/images/og/login.jpg"
+  }
+}

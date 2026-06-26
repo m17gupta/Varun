@@ -1,0 +1,50 @@
+{
+  "pageHeader": {
+    "title": "Books",
+    "subtitle": "Scholarly Works on the Mahabharata",
+    "description": "Explore my published books that bring rigorous scholarship and fresh perspectives on the Mahabharata to both academic and general audiences."
+  },
+  "books": [
+    {
+      "id": "mahabharata-companion",
+      "title": "The Mahabharata: A Modern Reader's Companion",
+      "coverImage": "/images/books/companion.jpg",
+      "description": "A comprehensive guide that navigates readers through the vast narrative landscape of the Mahabharata. This companion breaks down the epic's complex structure, introduces key characters, explains major philosophical concepts, and provides contextual background for each book (parva) of the epic. Ideal for students, scholars, and general readers seeking a reliable entry point into Mahabharata studies.",
+      "purchaseUrl": "/books/mahabharata-companion/purchase",
+      "amazonUrl": "https://amazon.in/dp/example1",
+      "publisher": "Academic Press India",
+      "year": 2024,
+      "pages": 380,
+      "isbn": "978-81-XXXX-XXX-X"
+    },
+    {
+      "id": "dharma-in-dialogue",
+      "title": "Dharma in Dialogue: Ethical Frameworks from the Mahabharata",
+      "coverImage": "/images/books/dharma-dialogue.jpg",
+      "description": "An in-depth exploration of the ethical debates embedded within the Mahabharata. This book examines how the epic presents dharma not as a fixed code but as a dynamic, context-dependent framework for ethical decision-making. Through close readings of key episodes — the dice game, the war council, and the final discourse — the book reveals the Mahabharata's sophisticated engagement with moral philosophy.",
+      "purchaseUrl": "/books/dharma-in-dialogue/purchase",
+      "amazonUrl": "https://amazon.in/dp/example2",
+      "publisher": "Oxford University Press India",
+      "year": 2025,
+      "pages": 420,
+      "isbn": "978-81-XXXX-XXX-Y"
+    },
+    {
+      "id": "women-mahabharata",
+      "title": "Women of the Mahabharata: Voices from the Epic",
+      "coverImage": "/images/books/women-mahabharata.jpg",
+      "description": "A groundbreaking study that centers the experiences and voices of women in the Mahabharata — Draupadi, Kunti, Gandhari, Subhadra, and others. This work challenges traditional interpretations and reveals the complexity, agency, and philosophical contributions of these characters beyond their conventional roles.",
+      "purchaseUrl": "/books/women-mahabharata/purchase",
+      "amazonUrl": "https://amazon.in/dp/example3",
+      "publisher": "Academic Press India",
+      "year": 2025,
+      "pages": 350,
+      "isbn": "978-81-XXXX-XXX-Z"
+    }
+  ],
+  "seo": {
+    "title": "Books by Varun Gupta | Mahabharata Scholarship",
+    "description": "Browse books by Varun Gupta on the Mahabharata — scholarly works that decode the epic's wisdom, philosophy, and narratives for modern readers.",
+    "ogImage": "/images/og/books.jpg"
+  }
+}

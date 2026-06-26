@@ -1,0 +1,98 @@
+{
+  "pageHeader": {
+    "title": "Membership",
+    "subtitle": "Support Mahabharata Scholarship",
+    "description": "Join our membership community to support ongoing research and gain access to exclusive content, resources, and direct engagement with Varun Gupta."
+  },
+  "tiers": [
+    {
+      "id": "free",
+      "name": "Free",
+      "price": 0,
+      "period": "month",
+      "description": "Basic access to public content and resources.",
+      "features": [
+        "Access to all public articles and research papers",
+        "Monthly newsletter",
+        "Video lecture access (selected)",
+        "Community discussion forum access"
+      ],
+      "cta": "Get Started",
+      "highlighted": false
+    },
+    {
+      "id": "supporter",
+      "name": "Supporter",
+      "price": 9,
+      "period": "month",
+      "description": "For dedicated readers who want deeper access and to support the work.",
+      "features": [
+        "Everything in Free plan",
+        "Exclusive research papers and preprints",
+        "Ad-free experience across the platform",
+        "Monthly live Q&A sessions with Varun",
+        "Early access to podcast episodes",
+        "Downloadable PDFs of all articles"
+      ],
+      "cta": "Become a Supporter",
+      "highlighted": false
+    },
+    {
+      "id": "premium",
+      "name": "Premium",
+      "price": 29,
+      "period": "month",
+      "description": "For serious scholars and enthusiasts seeking comprehensive access and direct collaboration.",
+      "features": [
+        "Everything in Supporter plan",
+        "Full course access (all modules and materials)",
+        "Private monthly webinar with Varun",
+        "Exclusive book chapter drafts and manuscripts",
+        "Direct messaging with Varun for research queries",
+        "Discount on all books and merchandise (20%)",
+        "Name listed on supporter wall"
+      ],
+      "cta": "Go Premium",
+      "highlighted": true
+    }
+  ],
+  "faq": [
+    {
+      "question": "Can I upgrade or downgrade my plan?",
+      "answer": "Yes, you can change your membership tier at any time. Upgrades take effect immediately, and downgrades apply at the start of the next billing cycle."
+    },
+    {
+      "question": "Is there a yearly billing option?",
+      "answer": "Yes, both Supporter and Premium plans are available with yearly billing at a discounted rate — Supporter at $90/year and Premium at $290/year."
+    },
+    {
+      "question": "Can I cancel my membership?",
+      "answer": "You can cancel anytime. Your access continues until the end of the current billing period, after which your account reverts to the Free tier."
+    },
+    {
+      "question": "What payment methods are accepted?",
+      "answer": "We accept all major credit and debit cards (Visa, Mastercard, American Express) as well as PayPal. Indian users can also pay via UPI and Net Banking."
+    },
+    {
+      "question": "Is my subscription tax-deductible?",
+      "answer": "Currently, membership subscriptions are not tax-deductible. However, we are in the process of establishing a non-profit research foundation."
+    },
+    {
+      "question": "Do you offer student or academic discounts?",
+      "answer": "Yes, verified students and academic researchers can contact us for discounted Premium access at $15/month. Please email with your institutional email ID."
+    },
+    {
+      "question": "How do I access exclusive content?",
+      "answer": "Once you subscribe, log into your account and navigate to the Members Area. All exclusive content will be tagged and accessible from your dashboard."
+    },
+    {
+      "question": "Can I gift a membership to someone else?",
+      "answer": "Absolutely! You can purchase a gift membership from the pricing page. The recipient will receive an email with instructions to activate their membership."
+    }
+  ],
+  "seo": {
+    "title": "Membership | Support Mahabharata Research | Varun Gupta",
+    "description": "Join Varun Gupta's membership community to support Mahabharata scholarship. Access exclusive research, courses, live Q&A, and more. Plans from free to premium.",
+    "ogImage": "/images/og/membership.jpg"
+  }
+}

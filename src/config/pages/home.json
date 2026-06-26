@@ -1,0 +1,164 @@
+{
+  "hero": {
+    "eyebrow": "Mahabharata Researcher, Author & Speaker",
+    "name": "Varun Gupta",
+    "headline": "Decoding the Timeless Wisdom of the Mahabharata for Modern Minds",
+    "tagline": "Bridging ancient Indian philosophy with contemporary research through scholarly analysis, publications, and global discourse on the world's greatest epic.",
+    "ctaPrimary": {
+      "label": "Explore Research",
+      "href": "/research"
+    },
+    "ctaSecondary": {
+      "label": "About Me",
+      "href": "/about"
+    }
+  },
+  "stats": [
+    {
+      "value": "50+",
+      "label": "Papers Published",
+      "icon": "file-text"
+    },
+    {
+      "value": "100K+",
+      "label": "Downloads",
+      "icon": "download"
+    },
+    {
+      "value": "2.5K+",
+      "label": "Citations",
+      "icon": "citation"
+    },
+    {
+      "value": "10K+",
+      "label": "PDF Access",
+      "icon": "book-open"
+    }
+  ],
+  "researchFocus": {
+    "sectionLabel": "Research Focus",
+    "sectionTitle": "Exploring the Mahabharata Through Scholarly Inquiry",
+    "items": [
+      {
+        "title": "Textual Analysis & Critical Edition Studies",
+        "description": "Examining variant manuscripts and critical editions of the Mahabharata to trace its evolution across centuries and regional traditions.",
+        "icon": "book"
+      },
+      {
+        "title": "Philosophical Frameworks in the Epic",
+        "description": "Analyzing the philosophical underpinnings of the Mahabharata including dharma, karma, and moksha as presented through its narrative and dialogues.",
+        "icon": "compass"
+      },
+      {
+        "title": "Historical Context & Chronology",
+        "description": "Investigating the historical and archaeological correlates of the Mahabharata narrative to establish chronological frameworks.",
+        "icon": "clock"
+      },
+      {
+        "title": "Contemporary Relevance & Application",
+        "description": "Drawing parallels between the epic's dilemmas and modern-day ethical challenges in leadership, governance, and personal conduct.",
+        "icon": "globe"
+      }
+    ]
+  },
+  "featuredContent": {
+    "sectionTitle": "Featured Research & Publications",
+    "description": "Selected scholarly works and articles that represent the core of my research on the Mahabharata.",
+    "items": [
+      {
+        "title": "The Concept of Dharma in the Mahabharata: A Critical Re-examination",
+        "type": "Research Paper",
+        "date": "2025",
+        "url": "/research/dharma-mahabharata"
+      },
+      {
+        "title": "Women in the Mahabharata: Beyond the Silences",
+        "type": "Book Chapter",
+        "date": "2024",
+        "url": "/research/women-mahabharata"
+      },
+      {
+        "title": "Geographical Correlates of the Mahabharata: A Multi-disciplinary Approach",
+        "type": "Journal Article",
+        "date": "2024",
+        "url": "/research/geographical-correlates"
+      }
+    ]
+  },
+  "latestVideos": {
+    "sectionTitle": "Latest Videos",
+    "description": "Lectures, talks, and discussions on Mahabharata scholarship.",
+    "items": [
+      {
+        "title": "The Mahabharata War: Myth or Reality?",
+        "thumbnail": "/images/videos/thumbnails/war-myth-reality.jpg",
+        "duration": "45:20",
+        "url": "https://youtube.com/watch?v=example1"
+      },
+      {
+        "title": "Understanding Dharma: Lessons from the Mahabharata",
+        "thumbnail": "/images/videos/thumbnails/understanding-dharma.jpg",
+        "duration": "38:15",
+        "url": "https://youtube.com/watch?v=example2"
+      },
+      {
+        "title": "The Women of the Mahabharata: Draupadi, Kunti, and Gandhari",
+        "thumbnail": "/images/videos/thumbnails/women-mahabharata.jpg",
+        "duration": "52:00",
+        "url": "https://youtube.com/watch?v=example3"
+      }
+    ]
+  },
+  "newsletterCta": {
+    "title": "Stay Connected with Mahabharata Scholarship",
+    "description": "Subscribe to receive updates on new research, publications, speaking engagements, and exclusive content delivered to your inbox.",
+    "buttonLabel": "Subscribe Now",
+    "href": "/newsletter"
+  },
+  "booksShowcase": {
+    "sectionTitle": "Books by Varun Gupta",
+    "items": [
+      {
+        "title": "The Mahabharata: A Modern Reader's Companion",
+        "coverImage": "/images/books/companion.jpg",
+        "description": "A comprehensive guide to navigating the epic's narrative, characters, and philosophical themes for contemporary readers.",
+        "href": "/books/mahabharata-companion"
+      },
+      {
+        "title": "Dharma in Dialogue: Ethical Frameworks from the Mahabharata",
+        "coverImage": "/images/books/dharma-dialogue.jpg",
+        "description": "An exploration of the ethical debates embedded within the Mahabharata and their relevance to modern moral philosophy.",
+        "href": "/books/dharma-in-dialogue"
+      }
+    ]
+  },
+  "speakingMedia": {
+    "sectionTitle": "Speaking & Media Appearances",
+    "description": "Conference keynotes, university lectures, podcast interviews, and media features.",
+    "items": [
+      {
+        "title": "Keynote: The Mahabharata in the 21st Century",
+        "event": "International Conference on Epic Studies, Oxford University",
+        "date": "2025",
+        "type": "Conference"
+      },
+      {
+        "title": "Interview: Decoding the Mahabharata",
+        "event": "The Ancient Wisdom Podcast",
+        "date": "2025",
+        "type": "Podcast"
+      },
+      {
+        "title": "Lecture Series: Philosophy of the Mahabharata",
+        "event": "Department of Sanskrit, University of Delhi",
+        "date": "2024",
+        "type": "Lecture"
+      }
+    ]
+  },
+  "seo": {
+    "title": "Varun Gupta | Mahabharata Researcher, Author & Speaker",
+    "description": "Explore the scholarly work of Varun Gupta on the Mahabharata — research papers, books, lectures, and articles decoding the timeless wisdom of the epic for modern minds.",
+    "ogImage": "/images/og/home.jpg"
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "pageHeader": {
+    "title": "Speaking",
+    "subtitle": "Keynotes, Lectures & Workshops",
+    "description": "Varun Gupta is available for speaking engagements at academic conferences, corporate events, cultural institutions, and educational forums."
+  },
+  "topics": [
+    {
+      "title": "The Mahabharata and Modern Leadership",
+      "description": "Exploring leadership lessons from the epic — decision-making under pressure, ethical dilemmas, and strategic wisdom from the Kurukshetra war.",
+      "duration": "45-60 min"
+    },
+    {
+      "title": "Dharma in the 21st Century",
+      "description": "How the Mahabharata's concept of dharma provides a framework for navigating contemporary ethical challenges in business, politics, and personal life.",
+      "duration": "45-60 min"
+    },
+    {
+      "title": "Women of the Mahabharata: Voices Silenced and Heard",
+      "description": "A fresh scholarly perspective on the women characters of the epic — Draupadi, Kunti, Gandhari, and others — and their relevance to gender discourse today.",
+      "duration": "60 min"
+    },
+    {
+      "title": "The Mahabharata: History, Myth, or Both?",
+      "description": "Examining the evidence for the historicity of the Mahabharata through archaeological, literary, and geographical lenses.",
+      "duration": "45-60 min"
+    },
+    {
+      "title": "Reading the Mahabharata as Philosophy",
+      "description": "A guided exploration of the philosophical underpinnings of the epic, including the Bhagavad Gita's teachings on action, duty, and liberation.",
+      "duration": "60-90 min"
+    }
+  ],
+  "pastEvents": [
+    {
+      "title": "Keynote Address: The Mahabharata in the 21st Century",
+      "event": "International Conference on Epic Studies",
+      "location": "Oxford University, UK",
+      "date": "2025-03-20",
+      "type": "Keynote"
+    },
+    {
+      "title": "The Philosophy of the Mahabharata",
+      "event": "Department of Sanskrit, University of Delhi",
+      "location": "Delhi, India",
+      "date": "2024-11-15",
+      "type": "Guest Lecture"
+    },
+    {
+      "title": "Dharma and Leadership: Lessons from the Mahabharata",
+      "event": "Corporate Leadership Summit",
+      "location": "Bangalore, India",
+      "date": "2024-09-10",
+      "type": "Workshop"
+    },
+    {
+      "title": "Women in the Mahabharata: A Scholarly Reappraisal",
+      "event": "Annual Conference on Gender and Indian Literature",
+      "location": "Jawaharlal Nehru University, Delhi",
+      "date": "2024-07-25",
+      "type": "Paper Presentation"
+    },
+    {
+      "title": "The Historical Geography of the Mahabharata",
+      "event": "National Seminar on Ancient Indian Geography",
+      "location": "Pune, India",
+      "date": "2024-04-12",
+      "type": "Lecture"
+    },
+    {
+      "title": "Panel Discussion: The Future of Indological Studies",
+      "event": "World Sanskrit Conference",
+      "location": "Bangkok, Thailand",
+      "date": "2024-01-08",
+      "type": "Panelist"
+    }
+  ],
+  "seo": {
+    "title": "Speaking Engagements | Varun Gupta",
+    "description": "Book Varun Gupta for speaking engagements on the Mahabharata — keynotes, lectures, and workshops on leadership, ethics, philosophy, and ancient Indian wisdom.",
+    "ogImage": "/images/og/speaking.jpg"
+  }
+}

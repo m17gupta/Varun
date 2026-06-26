@@ -1,0 +1,57 @@
+{
+  "pageHeader": {
+    "title": "Courses",
+    "subtitle": "Learn the Mahabharata Through Structured Study",
+    "description": "Online courses designed to provide a comprehensive, structured understanding of the Mahabharata — from its narrative to its philosophy."
+  },
+  "featuredCourse": {
+    "title": "Understanding the Mahabharata: A Comprehensive Course",
+    "subtitle": "An 8-week journey through the world's greatest epic",
+    "description": "This course offers a deep dive into the Mahabharata, covering its narrative structure, key characters, philosophical frameworks, and enduring relevance. Suitable for beginners and advanced learners alike, the course combines video lectures, readings, discussion forums, and live Q&A sessions.",
+    "instructor": "Varun Gupta",
+    "duration": "8 weeks",
+    "format": "Online (Self-paced + Live Sessions)",
+    "price": "Free",
+    "modules": [
+      {
+        "title": "Introduction to the Mahabharata",
+        "topics": ["Historical background", "Authorship and transmission", "Structure of the epic"]
+      },
+      {
+        "title": "The Story Unfolds",
+        "topics": ["The genealogy of the Kurus", "The rivalry begins", "Key episodes and turning points"]
+      },
+      {
+        "title": "Philosophy of the Gita",
+        "topics": ["The Bhagavad Gita in context", "Dharma, karma, and bhakti", "Arjuna's crisis and Krishna's counsel"]
+      },
+      {
+        "title": "Women in the Mahabharata",
+        "topics": ["Draupadi: Voice and agency", "Kunti: The silent architect", "Gandhari: The tragic queen"]
+      },
+      {
+        "title": "The War and Aftermath",
+        "topics": ["The Kurukshetra war", "Ethical dilemmas of war", "The aftermath and the curse"]
+      },
+      {
+        "title": "Contemporary Relevance",
+        "topics": ["Leadership lessons", "Ethical frameworks for modern life", "The Mahabharata in popular culture"]
+      }
+    ],
+    "learningOutcomes": [
+      "Understand the narrative arc and key episodes of the Mahabharata",
+      "Analyze the philosophical concepts of dharma, karma, and moksha",
+      "Critically engage with scholarly debates on the epic",
+      "Apply ethical insights from the Mahabharata to contemporary contexts",
+      "Identify major characters and their roles in the narrative"
+    ],
+    "image": "/images/courses/understanding-mahabharata.jpg",
+    "url": "/courses/understanding-mahabharata",
+    "startDate": "2025-07-01"
+  },
+  "seo": {
+    "title": "Mahabharata Online Courses | Varun Gupta",
+    "description": "Enroll in free online courses on the Mahabharata taught by Varun Gupta. Learn about the epic's narrative, philosophy, characters, and contemporary relevance.",
+    "ogImage": "/images/og/courses.jpg"
+  }
+}

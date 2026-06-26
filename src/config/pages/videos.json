@@ -1,0 +1,48 @@
+{
+  "pageHeader": {
+    "title": "Videos",
+    "subtitle": "Lectures, Talks & Discussions",
+    "description": "Watch recorded lectures, conference presentations, podcast appearances, and discussions on Mahabharata scholarship and philosophy."
+  },
+  "categories": [
+    {
+      "id": "all",
+      "label": "All Videos"
+    },
+    {
+      "id": "lectures",
+      "label": "Lectures"
+    },
+    {
+      "id": "conference-talks",
+      "label": "Conference Talks"
+    },
+    {
+      "id": "podcast-interviews",
+      "label": "Podcast Interviews"
+    },
+    {
+      "id": "panel-discussions",
+      "label": "Panel Discussions"
+    },
+    {
+      "id": "book-talks",
+      "label": "Book Talks"
+    }
+  ],
+  "featuredVideo": {
+    "title": "The Mahabharata War: Myth or Reality?",
+    "description": "A scholarly examination of the historical evidence for the Mahabharata war, exploring archaeological, literary, and geographical correlates.",
+    "thumbnail": "/images/videos/thumbnails/war-myth-reality.jpg",
+    "url": "https://youtube.com/watch?v=example1",
+    "duration": "45:20",
+    "date": "2025-02-10",
+    "category": "lectures",
+    "views": 12500
+  },
+  "seo": {
+    "title": "Mahabharata Videos & Lectures | Varun Gupta",
+    "description": "Watch Varun Gupta's lectures, talks, and discussions on the Mahabharata — covering philosophy, history, textual analysis, and contemporary relevance.",
+    "ogImage": "/images/og/videos.jpg"
+  }
+}
