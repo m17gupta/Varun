@@ -1,33 +1,15 @@
-"use client"
-
-import { motion } from "framer-motion"
-
-interface QuoteSectionProps {
-  quote: string
-  attribution: string
-}
-
-export function QuoteSection({ quote, attribution }: QuoteSectionProps) {
+export function QuoteSection() {
   return (
-    <section className="py-16 border-y border-border/50 bg-card/40">
-      <div className="max-w-3xl mx-auto px-6 text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-        >
-          <p
-            className="text-xl md:text-2xl leading-relaxed italic text-foreground/80"
-            style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 500 }}
-          >
-            &ldquo;{quote}&rdquo;
-          </p>
-          <p className="mt-4 text-xs uppercase tracking-[0.2em] text-muted-foreground font-medium">
-            — {attribution}
-          </p>
-        </motion.div>
-      </div>
+    <section className="border-y border-[#ded6ca] bg-[#efebe3] px-5 py-16 text-center sm:px-8">
+      <p className="text-[9px] font-bold uppercase tracking-[0.28em] text-[#9a9185]">
+        From the archive
+      </p>
+      <blockquote className="mx-auto mt-5 max-w-3xl font-serif text-3xl italic leading-snug text-[#3d3831] sm:text-4xl">
+        &ldquo;Where there is dharma, there is victory.&rdquo;
+      </blockquote>
+      <p className="mt-5 text-[10px] font-bold uppercase tracking-[0.2em] text-[#8c8478]">
+        Mahabharata, recurring maxim
+      </p>
     </section>
   )
 }
