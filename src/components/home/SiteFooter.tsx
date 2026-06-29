@@ -2,60 +2,74 @@ import Link from "next/link"
 
 export function SiteFooter() {
   return (
-    <footer className="bg-[#12110e] px-5 py-14 text-[#eee8dd] sm:px-8 lg:px-12">
-      <div className="mx-auto max-w-7xl">
-        <div className="grid gap-12 border-b border-white/10 pb-14 lg:grid-cols-[1.4fr_1fr_1fr]">
+    <footer className="bg-dark px-6 py-20 text-card sm:py-28 lg:px-12">
+      <div className="mx-auto max-w-[1400px]">
+        {/* Centered CTA */}
+        <div className="mx-auto max-w-2xl text-center pb-16 border-b border-white/10">
+          <p className="text-[11px] font-semibold uppercase tracking-[0.26em] text-white/40 mb-5">
+            The letter
+          </p>
+          <h2 className="font-serif text-4xl leading-tight sm:text-5xl lg:text-6xl text-card">
+            A weekly dispatch on dharma, history, and the long horizon.
+          </h2>
+          <form className="mt-10 mx-auto flex max-w-md border-b border-white/20">
+            <label htmlFor="newsletter-email-footer" className="sr-only">
+              Email address
+            </label>
+            <input
+              id="newsletter-email-footer"
+              type="email"
+              placeholder="youraddress@example.com"
+              className="min-w-0 flex-1 bg-transparent py-3.5 text-sm text-card placeholder:text-white/30 focus:outline-none"
+            />
+            <button
+              type="submit"
+              className="py-3.5 px-4 text-[11px] font-bold uppercase tracking-[0.2em] text-white/60 transition-colors duration-300 hover:text-card"
+            >
+              Subscribe
+            </button>
+          </form>
+        </div>
+
+        {/* Middle: Name + Links */}
+        <div className="grid gap-12 pt-16 lg:grid-cols-[1.4fr_1fr_1fr]">
           <div>
-            <p className="text-[10px] font-bold uppercase tracking-[0.24em] text-[#81796f]">
-              The letter
+            <p className="font-serif text-5xl leading-none sm:text-7xl text-card">
+              Varun Gupta
             </p>
-            <h2 className="mt-3 max-w-xl font-serif text-3xl leading-tight sm:text-4xl">
-              A weekly dispatch on dharma, history, and the long horizon.
-            </h2>
-            <form className="mt-8 flex max-w-md border-b border-white/20">
-              <label htmlFor="newsletter-email" className="sr-only">
-                Email address
-              </label>
-              <input
-                id="newsletter-email"
-                type="email"
-                placeholder="youraddress@example.com"
-                className="min-w-0 flex-1 bg-transparent py-3 text-sm text-[#eee8dd] placeholder:text-[#777066] focus:outline-none"
-              />
-              <button
-                type="submit"
-                className="py-3 text-[10px] font-bold uppercase tracking-[0.18em] text-[#bcb3a8]"
-              >
-                Subscribe
-              </button>
-            </form>
+            <p className="mt-4 max-w-sm text-sm text-white/40 leading-relaxed">
+              Mahabharata researcher, author, and speaker. Bridging ancient wisdom with the modern world.
+            </p>
           </div>
-          <nav className="grid gap-3 text-sm text-[#9a9185]">
-            <p className="mb-2 text-[10px] font-bold uppercase tracking-[0.24em] text-[#81796f]">
+          <nav className="grid gap-3 text-sm text-white/40">
+            <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.26em] text-white/40">
               Index
             </p>
-            <Link href="/articles">Essays</Link>
-            <Link href="/books">Books</Link>
-            <Link href="/videos">Lectures</Link>
-            <Link href="/podcast">Podcast</Link>
+            <Link href="/articles" className="transition-colors duration-300 hover:text-card">Essays</Link>
+            <Link href="/books" className="transition-colors duration-300 hover:text-card">Books</Link>
+            <Link href="/videos" className="transition-colors duration-300 hover:text-card">Lectures</Link>
+            <Link href="/podcast" className="transition-colors duration-300 hover:text-card">Podcast</Link>
           </nav>
-          <nav className="grid gap-3 text-sm text-[#9a9185]">
-            <p className="mb-2 text-[10px] font-bold uppercase tracking-[0.24em] text-[#81796f]">
+          <nav className="grid gap-3 text-sm text-white/40">
+            <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.26em] text-white/40">
               Society
             </p>
-            <Link href="/about">About</Link>
-            <Link href="/search">Ask the Archive</Link>
-            <Link href="/membership">Members</Link>
-            <Link href="/contact">Contact</Link>
+            <Link href="/about" className="transition-colors duration-300 hover:text-card">About</Link>
+            <Link href="/search" className="transition-colors duration-300 hover:text-card">Ask the Archive</Link>
+            <Link href="/membership" className="transition-colors duration-300 hover:text-card">Members</Link>
+            <Link href="/contact" className="transition-colors duration-300 hover:text-card">Contact</Link>
           </nav>
         </div>
-        <div className="flex flex-col gap-6 pt-10 sm:flex-row sm:items-end sm:justify-between">
-          <p className="font-serif text-5xl leading-none sm:text-7xl">
-            Varun Gupta
-          </p>
-          <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#746c62]">
+
+        {/* Bottom bar */}
+        <div className="mt-16 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3">
+          <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-white/30">
             © 2026 / All rights reserved
           </p>
+          <div className="flex items-center gap-6 text-[11px] text-white/30">
+            <Link href="/privacy" className="transition-colors duration-300 hover:text-card">Privacy</Link>
+            <Link href="/newsletter" className="transition-colors duration-300 hover:text-card">Newsletter</Link>
+          </div>
         </div>
       </div>
     </footer>

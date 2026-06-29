@@ -23,8 +23,9 @@ export function generateMetadata(): Metadata {
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen bg-[#f6f2eb] text-[#191714]">
+    <main className="min-h-screen bg-cream text-dark">
       <SiteHeader />
+      <div className="pt-24" /> {/* Offset for fixed header */}
       <HeroSection />
       <QuoteSection />
       <EssaysSection />
