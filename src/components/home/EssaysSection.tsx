@@ -1,11 +1,40 @@
+"use client"
+
+import { useRef } from "react"
 import Image from "next/image"
 import Link from "next/link"
+import { motion, useInView } from "framer-motion"
 import { essays } from "@/data/home"
 
+const fadeUp = {
+  hidden: { opacity: 0, y: 24 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.55, ease: [0.25, 0.1, 0.25, 1] as const } },
+}
+
+const cardItem = {
+  hidden: { opacity: 0, y: 32 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] as const } },
+}
+
+const cardContainer = {
+  hidden: {},
+  visible: {
+    transition: { staggerChildren: 0.08, delayChildren: 0.1 },
+  },
+}
+
 export function EssaysSection() {
+  const ref = useRef<HTMLElement>(null)
+  const isInView = useInView(ref, { once: true, margin: "-80px" })
+
   return (
-    <section className="mx-auto max-w-[1400px] px-6 py-20 sm:py-28 lg:px-12">
-      <div className="mb-10 flex items-end justify-between border-b border-border/60 pb-8">
+    <section ref={ref} className="mx-auto max-w-[1400px] px-6 py-20 sm:py-28 lg:px-12">
+      <motion.div
+        variants={fadeUp}
+        initial="hidden"
+        animate={isInView ? "visible" : "hidden"}
+        className="mb-10 flex items-end justify-between border-b border-border/60 pb-8"
+      >
         <div>
           <p className="text-[11px] font-semibold uppercase tracking-[0.26em] text-muted-foreground">
             01 / The essays
@@ -20,11 +49,16 @@ export function EssaysSection() {
         >
           View the index
         </Link>
-      </div>
+      </motion.div>
 
-      <div className="grid gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
+      <motion.div
+        variants={cardContainer}
+        initial="hidden"
+        animate={isInView ? "visible" : "hidden"}
+        className="grid gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-3"
+      >
         {essays.map((essay) => (
-          <article key={essay.href}>
+          <motion.article key={essay.href} variants={cardItem}>
             <Link href={essay.href} className="group block">
               <div className="relative aspect-[1.28/1] overflow-hidden rounded-2xl bg-muted">
                 <Image
@@ -46,9 +80,9 @@ export function EssaysSection() {
                 {essay.excerpt}
               </p>
             </Link>
-          </article>
+          </motion.article>
         ))}
-      </div>
+      </motion.div>
     </section>
   )
 }

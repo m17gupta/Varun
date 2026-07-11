@@ -1,12 +1,41 @@
+"use client"
+
+import { useRef } from "react"
 import Image from "next/image"
 import Link from "next/link"
+import { motion, useInView } from "framer-motion"
 import { books } from "@/data/home"
 
+const fadeUp = {
+  hidden: { opacity: 0, y: 24 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.55, ease: [0.25, 0.1, 0.25, 1] as const } },
+}
+
+const cardItem = {
+  hidden: { opacity: 0, y: 32 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] as const } },
+}
+
+const cardContainer = {
+  hidden: {},
+  visible: {
+    transition: { staggerChildren: 0.08, delayChildren: 0.1 },
+  },
+}
+
 export function BooksSection() {
+  const ref = useRef<HTMLElement>(null)
+  const isInView = useInView(ref, { once: true, margin: "-80px" })
+
   return (
-    <section className="bg-dark-gray px-6 py-20 text-card sm:py-28 lg:px-12">
+    <section ref={ref} className="bg-dark-gray px-6 py-20 text-card sm:py-28 lg:px-12">
       <div className="mx-auto max-w-[1400px]">
-        <div className="mb-10 flex items-end justify-between border-b border-border/10 pb-8">
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+          className="mb-10 flex items-end justify-between border-b border-border/10 pb-8"
+        >
           <div>
             <p className="text-[11px] font-semibold uppercase tracking-[0.26em] text-white/40">
               02 / The books
@@ -21,11 +50,16 @@ export function BooksSection() {
           >
             The shelf
           </Link>
-        </div>
+        </motion.div>
 
-        <div className="grid gap-7 sm:grid-cols-2 lg:grid-cols-4">
+        <motion.div
+          variants={cardContainer}
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+          className="grid gap-7 sm:grid-cols-2 lg:grid-cols-4"
+        >
           {books.map((work) => (
-            <article key={work.title}>
+            <motion.article key={work.title} variants={cardItem}>
               <Link href={work.href} className="group block">
                 <div className="relative aspect-[3/4] overflow-hidden rounded-2xl bg-dark border border-white/5">
                   <Image
@@ -46,9 +80,9 @@ export function BooksSection() {
                   {work.excerpt}
                 </p>
               </Link>
-            </article>
+            </motion.article>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   )
