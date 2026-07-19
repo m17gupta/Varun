@@ -28,25 +28,25 @@ export function BooksSection() {
   const isInView = useInView(ref, { once: true, margin: "-80px" })
 
   return (
-    <section ref={ref} className="bg-dark-gray px-6 py-20 text-card sm:py-28 lg:px-12">
+    <section ref={ref} className="bg-dark-gray px-6 py-16 text-card sm:py-24 lg:px-12">
       <div className="mx-auto max-w-[1400px]">
         <motion.div
           variants={fadeUp}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          className="mb-10 flex items-end justify-between border-b border-border/10 pb-8"
+          className="mb-10 flex items-end justify-between border-b border-border/10 pb-6"
         >
           <div>
-            <p className="text-[11px] font-semibold uppercase tracking-[0.26em] text-white/40">
+            <p className="text-[10px] font-semibold uppercase tracking-[0.26em] text-white/40">
               02 / The books
             </p>
-            <h2 className="mt-3 font-serif text-4xl leading-tight text-card sm:text-5xl">
+            <h2 className="mt-2 font-serif text-4xl leading-tight text-card sm:text-5xl">
               Published works
             </h2>
           </div>
           <Link
             href="/books"
-            className="hidden text-[11px] font-semibold uppercase tracking-[0.22em] text-white/40 transition-colors duration-300 hover:text-card sm:inline-flex"
+            className="hidden text-[10px] font-semibold uppercase tracking-[0.22em] text-white/40 transition-colors duration-300 hover:text-card sm:inline-flex"
           >
             The shelf
           </Link>
@@ -56,7 +56,7 @@ export function BooksSection() {
           variants={cardContainer}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          className="grid gap-7 sm:grid-cols-2 lg:grid-cols-4"
+          className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4"
         >
           {books.map((work) => (
             <motion.article key={work.title} variants={cardItem}>
@@ -70,13 +70,13 @@ export function BooksSection() {
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   />
                 </div>
-                <p className="mt-5 text-[10px] font-semibold uppercase tracking-[0.22em] text-white/40">
+                <p className="mt-4 text-[10px] font-semibold uppercase tracking-[0.22em] text-white/40">
                   {work.label}
                 </p>
                 <h3 className="mt-2 font-serif text-xl leading-snug text-card transition-colors duration-300 group-hover:text-tan">
                   {work.title}
                 </h3>
-                <p className="mt-2.5 text-sm leading-6 text-white/50">
+                <p className="mt-2 text-sm leading-6 text-white/50">
                   {work.excerpt}
                 </p>
               </Link>

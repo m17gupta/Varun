@@ -33,7 +33,7 @@ export function HeroSection() {
   const isInView = useInView(ref, { once: true, margin: "-80px" })
 
   return (
-    <section ref={ref} className="relative mx-auto max-w-[1400px] px-6 lg:px-12 pt-32 pb-20 sm:pb-28 lg:py-36">
+    <section ref={ref} className="relative mx-auto max-w-[1400px] px-6 lg:px-12 pt-28 pb-20 sm:pb-24 lg:py-32">
       {/* Decorative dot grid */}
       <motion.div
         initial={{ opacity: 0 }}
@@ -53,14 +53,14 @@ export function HeroSection() {
         variants={container}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
-        className="grid gap-14 lg:grid-cols-[1.1fr_0.9fr] lg:items-center"
+        className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center"
       >
         {/* Text side */}
         <div className="relative max-w-2xl">
-          <motion.p variants={itemUp} className="mb-8 text-[11px] font-semibold uppercase tracking-[0.28em] text-muted-foreground">
+          <motion.p variants={itemUp} className="mb-6 text-[10px] font-semibold uppercase tracking-[0.28em] text-muted-foreground">
             Vol. 01 / Essays / Lectures / Research
           </motion.p>
-          <motion.h1 variants={itemUp} className="font-serif text-[clamp(3rem,10vw,7rem)] leading-[0.92] text-dark">
+          <motion.h1 variants={itemUp} className="font-serif text-[clamp(3rem,10vw,7rem)] leading-[0.95] text-dark">
             A serious
             <span className="block">mind</span>
             <span className="block italic text-dark/70">
@@ -68,22 +68,22 @@ export function HeroSection() {
             </span>
             <span className="block italic text-dark/70">conversation.</span>
           </motion.h1>
-          <motion.p variants={itemUp} className="mt-9 max-w-md text-base leading-7 text-muted-foreground">
+          <motion.p variants={itemUp} className="mt-8 max-w-md text-base leading-7 text-muted-foreground">
             The published work of Varun Gupta, Mahabharata researcher,
             author, and speaker. Essays, books, lectures, and conversations on
             dharma, history, philosophy, and the living wisdom of the epic.
           </motion.p>
-          <motion.div variants={itemUp} className="mt-10 flex flex-wrap gap-4">
+          <motion.div variants={itemUp} className="mt-10 flex flex-wrap gap-3">
             <Link
               href="/articles"
-              className="inline-flex items-center gap-2.5 rounded-full bg-dark px-7 py-3.5 text-[11px] font-bold uppercase tracking-[0.2em] text-cream transition-all duration-300 hover:scale-105"
+              className="inline-flex items-center gap-2.5 rounded-full bg-dark px-6 py-3 text-[10px] font-bold uppercase tracking-[0.2em] text-cream transition-all duration-300 hover:scale-105"
             >
               Begin with the essays
               <ArrowRight className="size-3.5" />
             </Link>
             <Link
               href="/research"
-              className="inline-flex items-center gap-2.5 rounded-full border border-border px-7 py-3.5 text-[11px] font-bold uppercase tracking-[0.2em] text-muted-foreground transition-all duration-300 hover:bg-white hover:text-dark"
+              className="inline-flex items-center gap-2.5 rounded-full border border-border px-6 py-3 text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground transition-all duration-300 hover:bg-white hover:text-dark"
             >
               Ask the archive
             </Link>
@@ -92,7 +92,7 @@ export function HeroSection() {
           {/* Decorative thin line */}
           <motion.div
             variants={itemUp}
-            className="mt-14 hidden h-px w-24 bg-border/60 lg:block"
+            className="mt-12 hidden h-px w-24 bg-border/60 lg:block"
           />
         </div>
 

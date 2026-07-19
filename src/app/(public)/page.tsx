@@ -2,6 +2,7 @@ import { Metadata } from "next"
 import homeConfig from "@/config/pages/home.json"
 import { SiteHeader } from "@/components/home/SiteHeader"
 import { HeroSection } from "@/components/home/HeroSection"
+import { PodcastInviteSection } from "@/components/home/PodcastInviteSection"
 import { QuoteSection } from "@/components/home/QuoteSection"
 import { EssaysSection } from "@/components/home/EssaysSection"
 import { BooksSection } from "@/components/home/BooksSection"
@@ -25,8 +26,9 @@ export default function HomePage() {
   return (
     <main className="min-h-screen bg-cream text-dark">
       <SiteHeader />
-      <div className="pt-24" /> {/* Offset for fixed header */}
+      <div className="pt-20" /> {/* Offset for fixed header */}
       <HeroSection />
+      <PodcastInviteSection />
       <QuoteSection />
       <EssaysSection />
       <BooksSection />

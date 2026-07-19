@@ -28,24 +28,24 @@ export function EssaysSection() {
   const isInView = useInView(ref, { once: true, margin: "-80px" })
 
   return (
-    <section ref={ref} className="mx-auto max-w-[1400px] px-6 py-20 sm:py-28 lg:px-12">
+    <section ref={ref} className="mx-auto max-w-[1400px] px-6 py-16 sm:py-24 lg:px-12">
       <motion.div
         variants={fadeUp}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
-        className="mb-10 flex items-end justify-between border-b border-border/60 pb-8"
+        className="mb-10 flex items-end justify-between border-b border-border/60 pb-6"
       >
         <div>
-          <p className="text-[11px] font-semibold uppercase tracking-[0.26em] text-muted-foreground">
+          <p className="text-[10px] font-semibold uppercase tracking-[0.26em] text-muted-foreground">
             01 / The essays
           </p>
-          <h2 className="mt-3 font-serif text-4xl leading-tight text-dark sm:text-5xl">
+          <h2 className="mt-2 font-serif text-4xl leading-tight text-dark sm:text-5xl">
             Long-form writing
           </h2>
         </div>
         <Link
           href="/articles"
-          className="hidden text-[11px] font-semibold uppercase tracking-[0.22em] text-muted-foreground transition-colors duration-300 hover:text-dark sm:inline-flex"
+          className="hidden text-[10px] font-semibold uppercase tracking-[0.22em] text-muted-foreground transition-colors duration-300 hover:text-dark sm:inline-flex"
         >
           View the index
         </Link>
@@ -55,7 +55,7 @@ export function EssaysSection() {
         variants={cardContainer}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
-        className="grid gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-3"
+        className="grid gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3"
       >
         {essays.map((essay) => (
           <motion.article key={essay.href} variants={cardItem}>
@@ -69,14 +69,14 @@ export function EssaysSection() {
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
               </div>
-              <div className="mt-5 flex items-center justify-between gap-3 text-[10px] font-semibold uppercase tracking-[0.22em] text-muted-foreground">
+              <div className="mt-4 flex items-center justify-between gap-3 text-[10px] font-semibold uppercase tracking-[0.22em] text-muted-foreground">
                 <span>{essay.category}</span>
                 <span>{essay.readTime}</span>
               </div>
               <h3 className="mt-2 font-serif text-xl leading-snug text-dark transition-colors duration-300 group-hover:text-tan">
                 {essay.title}
               </h3>
-              <p className="mt-2.5 text-sm leading-6 text-muted-foreground">
+              <p className="mt-2 text-sm leading-6 text-muted-foreground">
                 {essay.excerpt}
               </p>
             </Link>

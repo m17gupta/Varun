@@ -87,19 +87,29 @@ export default function ContactPage() {
                         </div>
                         <div className="space-y-2">
                           <Label htmlFor="email">Email</Label>
-                          <Input id="email" type="email" placeholder="your@email.com" required />
+                          <Input id="email" type="email" placeholder="you@example.com" required />
+                        </div>
+                      </motion.div>
+                      <motion.div variants={formField} className="grid gap-4 sm:grid-cols-2">
+                        <div className="space-y-2">
+                          <Label htmlFor="phone">Phone</Label>
+                          <Input id="phone" type="tel" placeholder="+91 00000 00000" />
+                        </div>
+                        <div className="space-y-2">
+                          <Label htmlFor="youtube">YouTube Channel</Label>
+                          <Input id="youtube" type="url" placeholder="https://youtube.com/@yourchannel" />
                         </div>
                       </motion.div>
                       <motion.div variants={formField} className="space-y-2">
-                        <Label htmlFor="subject">Subject</Label>
-                        <Input id="subject" placeholder="What is this regarding?" required />
+                        <Label htmlFor="instagram">Instagram</Label>
+                        <Input id="instagram" type="url" placeholder="https://instagram.com/yourhandle" />
                       </motion.div>
                       <motion.div variants={formField} className="space-y-2">
-                        <Label htmlFor="message">Message</Label>
+                        <Label htmlFor="podcastTheme">Podcast Theme</Label>
                         <Textarea
-                          id="message"
-                          placeholder="Your message..."
-                          className="min-h-[160px]"
+                          id="podcastTheme"
+                          placeholder="What would you like to discuss on the podcast?"
+                          className="min-h-[140px]"
                           required
                         />
                       </motion.div>

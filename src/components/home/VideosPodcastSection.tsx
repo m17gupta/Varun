@@ -35,19 +35,19 @@ export function VideosPodcastSection() {
           variants={fadeUp}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          className="px-6 py-20 sm:py-28 lg:border-r lg:border-border/60 lg:px-12"
+          className="px-6 py-16 sm:py-24 lg:border-r lg:border-border/60 lg:px-12"
         >
-          <p className="text-[11px] font-semibold uppercase tracking-[0.26em] text-muted-foreground">
+          <p className="text-[10px] font-semibold uppercase tracking-[0.26em] text-muted-foreground">
             03 / The lectures
           </p>
-          <h2 className="mt-3 font-serif text-4xl text-dark sm:text-5xl">
+          <h2 className="mt-2 font-serif text-4xl text-dark sm:text-5xl">
             Video
           </h2>
           <motion.div
             variants={listContainer}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
-            className="mt-10 space-y-6"
+            className="mt-8 space-y-5"
           >
             {videos.map((video) => (
               <motion.div key={video.title} variants={itemSlide}>
@@ -78,7 +78,7 @@ export function VideosPodcastSection() {
           </motion.div>
           <Link
             href="/videos"
-            className="mt-10 inline-flex text-[11px] font-semibold uppercase tracking-[0.22em] text-muted-foreground transition-colors duration-300 hover:text-dark"
+            className="mt-8 inline-flex text-[10px] font-semibold uppercase tracking-[0.22em] text-muted-foreground transition-colors duration-300 hover:text-dark"
           >
             All lectures
           </Link>
@@ -89,19 +89,19 @@ export function VideosPodcastSection() {
           variants={fadeUp}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          className="bg-muted px-6 py-20 sm:py-28 lg:px-12"
+          className="bg-muted px-6 py-16 sm:py-24 lg:px-12"
         >
-          <p className="text-[11px] font-semibold uppercase tracking-[0.26em] text-muted-foreground">
+          <p className="text-[10px] font-semibold uppercase tracking-[0.26em] text-muted-foreground">
             04 / The conversations
           </p>
-          <h2 className="mt-3 font-serif text-4xl text-dark sm:text-5xl">
+          <h2 className="mt-2 font-serif text-4xl text-dark sm:text-5xl">
             The Podcast
           </h2>
           <motion.div
             variants={listContainer}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
-            className="mt-10 space-y-6"
+            className="mt-8 space-y-5"
           >
             {podcasts.map((title, index) => (
               <motion.div key={title} variants={itemSlide}>
@@ -126,7 +126,7 @@ export function VideosPodcastSection() {
           </motion.div>
           <Link
             href="/podcast"
-            className="mt-10 inline-flex text-[11px] font-semibold uppercase tracking-[0.22em] text-muted-foreground transition-colors duration-300 hover:text-dark"
+            className="mt-8 inline-flex text-[10px] font-semibold uppercase tracking-[0.22em] text-muted-foreground transition-colors duration-300 hover:text-dark"
           >
             All episodes
           </Link>
