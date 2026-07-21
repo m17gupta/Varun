@@ -18,7 +18,7 @@ interface SpeakingMediaProps {
   items: SpeakingItem[]
 }
 
-const typeIcons: Record<string, React.ElementType> = {
+const typeIcons: Record<string, React.ComponentType<{ className?: string; strokeWidth?: number }>> = {
   Conference: Mic,
   Podcast: Radio,
   Lecture: BookOpen,

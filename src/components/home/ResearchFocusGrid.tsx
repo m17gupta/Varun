@@ -18,7 +18,7 @@ interface ResearchFocusGridProps {
   items: ResearchItem[]
 }
 
-const iconMap: Record<string, React.ElementType> = {
+const iconMap: Record<string, React.ComponentType<{ className?: string; strokeWidth?: number }>> = {
   book: BookText,
   compass: Compass,
   clock: Clock,

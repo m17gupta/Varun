@@ -2,6 +2,7 @@
 
 import { useRef } from "react"
 import { motion, useInView } from "framer-motion"
+import Image from "next/image"
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -18,7 +19,27 @@ export function QuoteSection() {
   const isInView = useInView(ref, { once: true, margin: "-80px" })
 
   return (
-    <section ref={ref} className="border-y border-border/60 bg-muted px-6 py-16 text-center sm:py-20">
+    <section ref={ref} className="relative overflow-hidden border-y border-border/60 bg-muted px-6 py-16 text-center sm:py-20">
+      {/* Background Rotating Mandala */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={isInView ? { opacity: 0.04, scale: 1 } : { opacity: 0, scale: 0.9 }}
+        transition={{ duration: 1.5 }}
+        className="absolute left-1/2 top-1/2 -z-10 size-[400px] -translate-x-1/2 -translate-y-1/2 pointer-events-none select-none mix-blend-multiply"
+      >
+        <motion.div
+          animate={{ rotate: -360 }}
+          transition={{ duration: 180, ease: "linear", repeat: Infinity }}
+          className="relative size-full"
+        >
+          <Image
+            src="/images/home/mandala.jpg"
+            alt="Mandala Background"
+            fill
+            className="object-contain"
+          />
+        </motion.div>
+      </motion.div>
       <div className="mx-auto max-w-[1400px]">
         <motion.p
           variants={fadeUp}

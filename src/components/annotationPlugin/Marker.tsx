@@ -23,7 +23,7 @@ interface MarkerProps {
   annotation: Annotation;
 }
 
-const statusConfig: Record<CommentStatus, { color: string; icon: React.ElementType; label: string }> = {
+const statusConfig: Record<CommentStatus, { color: string; icon: React.ComponentType<{ size?: number; className?: string }>; label: string }> = {
   open: { color: 'bg-red-500 ring-red-200 text-red-700', icon: AlertCircle, label: 'Open' },
   pending: { color: 'bg-yellow-500 ring-yellow-200 text-yellow-700', icon: Clock, label: 'Pending' },
   done: { color: 'bg-green-500 ring-green-200 text-green-700', icon: CheckCircle2, label: 'Done' },

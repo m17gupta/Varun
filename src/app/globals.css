@@ -171,3 +171,16 @@
     @apply font-sans;
   }
 }
+
+html.has-admin-bar {
+  --admin-bar-height: 44px;
+}
+
+html.has-admin-bar body {
+  padding-top: var(--admin-bar-height);
+}
+
+html.has-admin-bar .sticky {
+  top: var(--admin-bar-height) !important;
+}
+

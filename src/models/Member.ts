@@ -79,7 +79,7 @@ const MemberSchema = new Schema<IMemberDocument>(
     bio: { type: String },
     newsletter: { type: Boolean, default: true },
   },
-  { timestamps: true },
+  { timestamps: true, collection: "members" },
 );
 
 MemberSchema.index({ email: 1 });

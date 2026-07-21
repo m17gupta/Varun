@@ -33,7 +33,28 @@ export function HeroSection() {
   const isInView = useInView(ref, { once: true, margin: "-80px" })
 
   return (
-    <section ref={ref} className="relative mx-auto max-w-[1400px] px-6 lg:px-12 pt-28 pb-20 sm:pb-24 lg:py-32">
+    <section ref={ref} className="relative overflow-hidden mx-auto max-w-[1400px] px-6 lg:px-12 pt-28 pb-20 sm:pb-24 lg:py-32">
+      {/* Background Mandala Watermark */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={isInView ? { opacity: 0.05 } : { opacity: 0 }}
+        transition={{ duration: 1.5 }}
+        className="absolute left-[30%] top-1/2 -z-10 size-[600px] -translate-x-1/2 -translate-y-1/2 pointer-events-none select-none mix-blend-multiply"
+      >
+        <motion.div
+          animate={{ rotate: 360 }}
+          transition={{ duration: 150, ease: "linear", repeat: Infinity }}
+          className="relative size-full"
+        >
+          <Image
+            src="/images/home/mandala.jpg"
+            alt="Mandala Background"
+            fill
+            className="object-contain opacity-75"
+          />
+        </motion.div>
+      </motion.div>
+
       {/* Decorative dot grid */}
       <motion.div
         initial={{ opacity: 0 }}
@@ -101,21 +122,47 @@ export function HeroSection() {
           variants={imageReveal}
           className="relative mx-auto w-full max-w-[460px] self-center lg:max-w-[500px]"
         >
-          {/* Decorative circles */}
+          {/* Decorative rotating mandala behind/beside portrait */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
-            transition={{ duration: 0.7, delay: 0.35 }}
-            className="absolute -right-8 -top-8 size-48 rounded-full border border-border/30 opacity-50 lg:size-64"
+            initial={{ opacity: 0, scale: 0.8, rotate: 0 }}
+            animate={isInView ? { opacity: 0.25, scale: 1, rotate: 45 } : { opacity: 0, scale: 0.8, rotate: 0 }}
+            transition={{ duration: 1.2, ease: [0.25, 0.1, 0.25, 1], delay: 0.35 }}
+            className="absolute -right-12 -top-12 size-48 overflow-hidden rounded-full mix-blend-multiply lg:size-64"
             aria-hidden="true"
-          />
+          >
+            <motion.div
+              animate={{ rotate: -360 }}
+              transition={{ duration: 180, ease: "linear", repeat: Infinity }}
+              className="relative size-full"
+            >
+              <Image
+                src="/images/home/mandala.jpg"
+                alt="Decorative Mandala"
+                fill
+                className="object-cover opacity-80"
+              />
+            </motion.div>
+          </motion.div>
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
-            transition={{ duration: 0.7, delay: 0.45 }}
-            className="absolute -left-4 bottom-12 size-24 rounded-full border border-border/20 opacity-30 lg:size-32"
+            initial={{ opacity: 0, scale: 0.8, rotate: 0 }}
+            animate={isInView ? { opacity: 0.15, scale: 1, rotate: -30 } : { opacity: 0, scale: 0.8, rotate: 0 }}
+            transition={{ duration: 1.2, ease: [0.25, 0.1, 0.25, 1], delay: 0.45 }}
+            className="absolute -left-8 bottom-12 size-24 overflow-hidden rounded-full mix-blend-multiply lg:size-32"
             aria-hidden="true"
-          />
+          >
+            <motion.div
+              animate={{ rotate: 360 }}
+              transition={{ duration: 120, ease: "linear", repeat: Infinity }}
+              className="relative size-full"
+            >
+              <Image
+                src="/images/home/mandala.jpg"
+                alt="Decorative Mandala Small"
+                fill
+                className="object-cover opacity-80"
+              />
+            </motion.div>
+          </motion.div>
 
           {/* Portrait */}
           <div className="relative aspect-[4/5] overflow-hidden bg-dark-gray">
