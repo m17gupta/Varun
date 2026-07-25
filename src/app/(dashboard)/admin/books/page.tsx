@@ -62,6 +62,7 @@ export default function AdminBooksPage() {
       <Table>
         <TableHeader>
           <TableRow>
+            <TableHead className="w-12">Image</TableHead>
             <TableHead>Title</TableHead>
             <TableHead>Label</TableHead>
             <TableHead>Status</TableHead>
@@ -73,6 +74,7 @@ export default function AdminBooksPage() {
           {loading
             ? Array.from({ length: 5 }).map((_, i) => (
                 <TableRow key={i}>
+                  <TableCell><Skeleton className="size-10 rounded" /></TableCell>
                   <TableCell><Skeleton className="h-4 w-48" /></TableCell>
                   <TableCell><Skeleton className="h-4 w-16" /></TableCell>
                   <TableCell><Skeleton className="h-4 w-16" /></TableCell>
@@ -83,13 +85,25 @@ export default function AdminBooksPage() {
             : books.length === 0
               ? (
                 <TableRow>
-                  <TableCell colSpan={5} className="text-center text-muted-foreground py-8">
+                  <TableCell colSpan={6} className="text-center text-muted-foreground py-8">
                     No books found
                   </TableCell>
                 </TableRow>
               )
               : books.map((book) => (
                   <TableRow key={book._id}>
+                    <TableCell>
+                      {book.image ? (
+                        // eslint-disable-next-line @next/next/no-img-element
+                        <img
+                          src={book.image}
+                          alt=""
+                          className="size-10 rounded object-cover"
+                        />
+                      ) : (
+                        <div className="size-10 rounded bg-muted" />
+                      )}
+                    </TableCell>
                     <TableCell className="font-medium">{book.title}</TableCell>
                     <TableCell>
                       <Badge variant="outline">{book.label}</Badge>
