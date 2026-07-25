@@ -11,7 +11,15 @@ export interface IBookReview {
 export interface IBookDocument extends Document {
   title: string;
   slug: string;
-  description: string;
+  label: string;
+  excerpt: string;
+  image?: string;
+  href: string;
+  featured: boolean;
+  order: number;
+  published: boolean;
+  type: string;
+  description?: string;
   coverImage?: string;
   amazonUrl?: string;
   kindleUrl?: string;
@@ -20,9 +28,8 @@ export interface IBookDocument extends Document {
   isbn?: string;
   publishedDate?: Date;
   publisher?: string;
-  category: string;
-  tags: string[];
-  featured: boolean;
+  category?: string;
+  tags?: string[];
   excerpts?: string[];
   reviews?: IBookReview[];
   createdAt: Date;
@@ -44,7 +51,15 @@ const BookSchema = new Schema<IBookDocument>(
   {
     title: { type: String, required: true, trim: true },
     slug: { type: String, required: true, unique: true, lowercase: true },
-    description: { type: String, required: true },
+    label: { type: String, required: true },
+    excerpt: { type: String, required: true },
+    image: { type: String },
+    href: { type: String, required: true },
+    featured: { type: Boolean, default: false },
+    order: { type: Number, default: 0 },
+    published: { type: Boolean, default: true },
+    type: { type: String, default: "book" },
+    description: { type: String },
     coverImage: { type: String },
     amazonUrl: { type: String },
     kindleUrl: { type: String },
@@ -53,9 +68,8 @@ const BookSchema = new Schema<IBookDocument>(
     isbn: { type: String },
     publishedDate: { type: Date },
     publisher: { type: String },
-    category: { type: String, required: true },
+    category: { type: String },
     tags: [{ type: String, lowercase: true }],
-    featured: { type: Boolean, default: false },
     excerpts: [{ type: String }],
     reviews: [ReviewSchema],
   },
@@ -64,7 +78,7 @@ const BookSchema = new Schema<IBookDocument>(
 
 BookSchema.index({ slug: 1 });
 BookSchema.index({ featured: 1 });
-BookSchema.index({ category: 1 });
+BookSchema.index({ type: 1 });
 
 const Book =
   (mongoose.models.Book as Model<IBookDocument>) ??

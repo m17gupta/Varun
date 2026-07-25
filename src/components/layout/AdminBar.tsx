@@ -5,8 +5,10 @@ import { LayoutDashboard, MessageSquare, Eye, EyeOff } from "lucide-react"
 import Link from "next/link"
 import { useAppSelector } from "@/lib/store/hooks"
 import { useAnnotatorStore } from "@/components/annotationPlugin"
+import { usePathname } from "next/navigation"
 
 export function AdminBar() {
+  const pathname = usePathname()
   const { isAuthenticated, user } = useAppSelector((state) => state.auth)
   const { isCommentModeActive, toggleCommentMode, annotations } = useAnnotatorStore()
   const [isVisible, setIsVisible] = useState(true)
@@ -23,6 +25,8 @@ export function AdminBar() {
       document.documentElement.classList.remove("has-admin-bar")
     }
   }, [isAdmin, isVisible])
+
+  if (pathname.startsWith("/admin")) return null
 
   if (!isAdmin) return null
 

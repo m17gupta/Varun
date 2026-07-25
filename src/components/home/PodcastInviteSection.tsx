@@ -1,9 +1,10 @@
 "use client"
 
-import { useRef } from "react"
+import { useRef, useState } from "react"
 import Link from "next/link"
 import { motion, useInView, useReducedMotion } from "framer-motion"
 import { ArrowRight, Mic } from "lucide-react"
+import { PodcastInviteModal } from "./PodcastInviteModal"
 
 const container = {
   hidden: {},
@@ -26,15 +27,16 @@ export function PodcastInviteSection() {
   const ref = useRef<HTMLElement>(null)
   const isInView = useInView(ref, { once: true, margin: "-80px" })
   const reduce = useReducedMotion()
+  const [showModal, setShowModal] = useState(false)
 
   return (
     <section
       ref={ref}
       id="podcast-invite"
       aria-labelledby="podcast-invite-heading"
-      className="bg-dark-gray px-6 py-16 text-card sm:py-24 lg:px-12"
+      className="bg-dark-gray px-6 py-12 text-card sm:py-20 lg:px-12"
     >
-      <div className="mx-auto grid max-w-[1400px] gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+      <div className="mx-auto grid max-w-[1400px] gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
         {/* Invitation copy */}
         <motion.div
           variants={container}
@@ -73,12 +75,12 @@ export function PodcastInviteSection() {
               Browse episodes
               <ArrowRight className="size-3.5" />
             </Link>
-            <Link
-              href="/contact"
+            <button
+              onClick={() => setShowModal(true)}
               className="inline-flex items-center gap-2.5 rounded-full border border-border/40 px-6 py-3 text-[10px] font-bold uppercase tracking-[0.2em] text-card transition-all duration-300 hover:bg-card hover:text-dark"
             >
               Invite me on your show
-            </Link>
+            </button>
           </motion.div>
         </motion.div>
 
@@ -148,6 +150,8 @@ export function PodcastInviteSection() {
           </div>
         </motion.div>
       </div>
+
+      <PodcastInviteModal open={showModal} onClose={() => setShowModal(false)} />
     </section>
   )
 }

@@ -1,10 +1,11 @@
 "use client"
 
-import { useRef } from "react"
+import { useRef, useEffect } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { motion, useInView } from "framer-motion"
 import { ArrowRight } from "lucide-react"
+import { animate } from "animejs"
 
 const container = {
   hidden: {},
@@ -23,14 +24,34 @@ const imageReveal = {
   visible: { opacity: 1, scale: 1, x: 0, transition: { duration: 0.85, ease: [0.25, 0.1, 0.25, 1] as const, delay: 0.25 } },
 }
 
-const badgeReveal = {
-  hidden: { opacity: 0, y: 16 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] as const, delay: 0.65 } },
-}
-
 export function HeroSection() {
   const ref = useRef<HTMLDivElement>(null)
   const isInView = useInView(ref, { once: true, margin: "-80px" })
+
+  const bgMandalaRef = useRef<HTMLDivElement>(null)
+  const topMandalaRef = useRef<HTMLDivElement>(null)
+  const bottomMandalaRef = useRef<HTMLDivElement>(null)
+  const badgeRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    if (!isInView) return
+
+    const anims = [
+      animate(bgMandalaRef.current!, { rotate: 360, duration: 150000, easing: "linear", loop: true }),
+      animate(topMandalaRef.current!, { rotate: -360, duration: 180000, easing: "linear", loop: true }),
+      animate(bottomMandalaRef.current!, { rotate: 360, duration: 120000, easing: "linear", loop: true }),
+    ]
+
+    return () => anims.forEach((a) => a.pause())
+  }, [isInView])
+
+  useEffect(() => {
+    if (!isInView || !badgeRef.current) return
+
+    animate(badgeRef.current!, { translateY: [16, 0], opacity: [0, 1], duration: 600, easing: "spring", delay: 650 })
+
+    badgeRef.current.style.opacity = "0"
+  }, [isInView])
 
   return (
     <section ref={ref} className="relative overflow-hidden mx-auto max-w-[1400px] px-6 lg:px-12 pt-28 pb-20 sm:pb-24 lg:py-32">
@@ -41,18 +62,14 @@ export function HeroSection() {
         transition={{ duration: 1.5 }}
         className="absolute left-[30%] top-1/2 -z-10 size-[600px] -translate-x-1/2 -translate-y-1/2 pointer-events-none select-none mix-blend-multiply"
       >
-        <motion.div
-          animate={{ rotate: 360 }}
-          transition={{ duration: 150, ease: "linear", repeat: Infinity }}
-          className="relative size-full"
-        >
+        <div ref={bgMandalaRef} className="relative size-full">
           <Image
             src="/images/home/mandala.jpg"
             alt="Mandala Background"
             fill
             className="object-contain opacity-75"
           />
-        </motion.div>
+        </div>
       </motion.div>
 
       {/* Decorative dot grid */}
@@ -130,18 +147,14 @@ export function HeroSection() {
             className="absolute -right-12 -top-12 size-48 overflow-hidden rounded-full mix-blend-multiply lg:size-64"
             aria-hidden="true"
           >
-            <motion.div
-              animate={{ rotate: -360 }}
-              transition={{ duration: 180, ease: "linear", repeat: Infinity }}
-              className="relative size-full"
-            >
+            <div ref={topMandalaRef} className="relative size-full">
               <Image
                 src="/images/home/mandala.jpg"
                 alt="Decorative Mandala"
                 fill
                 className="object-cover opacity-80"
               />
-            </motion.div>
+            </div>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, scale: 0.8, rotate: 0 }}
@@ -150,18 +163,14 @@ export function HeroSection() {
             className="absolute -left-8 bottom-12 size-24 overflow-hidden rounded-full mix-blend-multiply lg:size-32"
             aria-hidden="true"
           >
-            <motion.div
-              animate={{ rotate: 360 }}
-              transition={{ duration: 120, ease: "linear", repeat: Infinity }}
-              className="relative size-full"
-            >
+            <div ref={bottomMandalaRef} className="relative size-full">
               <Image
                 src="/images/home/mandala.jpg"
                 alt="Decorative Mandala Small"
                 fill
                 className="object-cover opacity-80"
               />
-            </motion.div>
+            </div>
           </motion.div>
 
           {/* Portrait */}
@@ -178,10 +187,8 @@ export function HeroSection() {
           </div>
 
           {/* Floating badge */}
-          <motion.div
-            variants={badgeReveal}
-            initial="hidden"
-            animate={isInView ? "visible" : "hidden"}
+          <div
+            ref={badgeRef}
             className="absolute -bottom-3 left-0 max-w-[270px] rounded-2xl bg-card px-6 py-5 shadow-lg ring-1 ring-border/30"
           >
             <p className="text-[10px] font-semibold uppercase tracking-[0.24em] text-muted-foreground">
@@ -190,7 +197,7 @@ export function HeroSection() {
             <p className="mt-1.5 font-serif text-sm italic leading-snug text-dark">
               The Mahabharata, Critical Edition
             </p>
-          </motion.div>
+          </div>
         </motion.div>
       </motion.div>
     </section>

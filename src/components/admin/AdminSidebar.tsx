@@ -14,12 +14,14 @@ import {
   Menu,
   BookOpen,
 } from "lucide-react"
+import { useDispatch, useSelector } from "react-redux"
+import { RootState } from "@/lib/store/store"
 
 const navItems = [
   { label: "Overview", href: "/admin", icon: LayoutDashboard },
-  { label: "Content", href: "/admin/content", icon: FileText },
-  { label: "Members", href: "/admin/members", icon: Users },
-  { label: "Newsletter", href: "/admin/newsletter", icon: Mail },
+  { label: "Books", href: "/admin/books", icon: FileText },
+  { label: "Users", href: "/admin/members", icon: Users },
+  { label: "Videos", href: "/admin/videos", icon: Mail },
   { label: "Analytics", href: "/admin/analytics", icon: BarChart3 },
 ]
 
@@ -52,13 +54,16 @@ function SidebarNav() {
 }
 
 export function AdminSidebar() {
+
+  const dispatch= useDispatch()
+  const {user}= useSelector((state:RootState)=>state.auth)
   return (
     <>
       {/* Desktop sidebar */}
       <aside className="hidden w-56 shrink-0 border-r bg-card md:flex md:flex-col">
         <div className="flex h-14 items-center gap-2 border-b px-4 font-semibold">
           <BookOpen className="size-5 text-primary" />
-          <span>Varun Gupta</span>
+          <span>{user?.name}</span>
         </div>
         <ScrollArea className="flex-1 px-3 py-4">
           <SidebarNav />
@@ -74,7 +79,7 @@ export function AdminSidebar() {
         <SheetContent side="left" className="w-56 p-0">
           <div className="flex h-14 items-center gap-2 border-b px-4 font-semibold">
             <BookOpen className="size-5 text-primary" />
-            <span>Varun Gupta</span>
+         <span>{user?.name}</span>
           </div>
           <ScrollArea className="flex-1 px-3 py-4">
             <SidebarNav />
