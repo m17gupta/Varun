@@ -55,7 +55,7 @@ export const deleteBookThunk = createAsyncThunk(
   "books/delete",
   async (id: string, { rejectWithValue }) => {
     try {
-      const res = await fetch(`/api/admin/content/${id}`, { method: "DELETE" })
+      const res = await fetch(`/api/admin/books/${id}`, { method: "DELETE" })
       const json = await res.json()
       if (!res.ok) return rejectWithValue(json.message || "Failed to delete book")
       return id

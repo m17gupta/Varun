@@ -1,10 +1,13 @@
 "use client"
 
-import { useRef } from "react"
+import { useEffect, useRef } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { motion, useInView } from "framer-motion"
-import { videos, podcasts } from "@/data/home"
+import { podcasts } from "@/data/home"
+import { useAppDispatch, useAppSelector } from "@/lib/store/hooks"
+import { fetchVideosThunk } from "@/lib/store/videos/videosThunks"
+import type { VideoModel } from "@/lib/store/videos/videosTypes"
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -26,6 +29,60 @@ const listContainer = {
 export function VideosPodcastSection() {
   const ref = useRef<HTMLElement>(null)
   const isInView = useInView(ref, { once: true, margin: "-80px" })
+  const dispatch = useAppDispatch()
+  const { videos, isFetchedVideos } = useAppSelector((s) => s.videos)
+
+  useEffect(() => {
+    if (!isFetchedVideos) dispatch(fetchVideosThunk())
+  }, [dispatch, isFetchedVideos])
+
+  const featured = videos.filter((v) => v.published && v.featured)
+  const published = videos.filter((v) => v.published && !v.featured)
+  const homeVideos = [...featured, ...published].slice(0, 3)
+
+  const fallback: VideoModel[] = [
+    {
+      title: "The Mahabharata War: Myth or Reality?",
+      category: "lectures",
+      duration: 45 * 60,
+      videoUrl: "",
+      slug: "fallback-1",
+      description: "",
+      published: true,
+    },
+    {
+      title: "Understanding Dharma: Lessons from the Epic",
+      category: "practice",
+      duration: 38 * 60,
+      videoUrl: "",
+      slug: "fallback-2",
+      description: "",
+      published: true,
+    },
+    {
+      title: "The Women of the Mahabharata",
+      category: "talk",
+      duration: 52 * 60,
+      videoUrl: "",
+      slug: "fallback-3",
+      description: "",
+      published: true,
+    },
+  ]
+
+  const displayVideos = homeVideos.length > 0 ? homeVideos : fallback
+
+  function formatDuration(seconds?: number) {
+    if (!seconds || seconds <= 0) return ""
+    const mins = Math.floor(seconds / 60)
+    const secs = seconds % 60
+    return `${mins}:${String(secs).padStart(2, "0")}`
+  }
+
+  function categoryLabel(video: VideoModel) {
+    const words = (video.category ?? "Lecture").split("-")
+    return words.map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join(" ")
+  }
 
   return (
     <section ref={ref} className="border-b border-border/60">
@@ -49,24 +106,33 @@ export function VideosPodcastSection() {
             animate={isInView ? "visible" : "hidden"}
             className="mt-8 space-y-5"
           >
-            {videos.map((video) => (
-              <motion.div key={video.title} variants={itemSlide}>
+            {displayVideos.map((video) => (
+              <motion.div key={video._id ?? video.title} variants={itemSlide}>
                 <Link
-                  href={video.href}
+                  href={video.videoUrl || "/videos"}
+                  target={video.videoUrl ? "_blank" : undefined}
+                  rel={video.videoUrl ? "noopener noreferrer" : undefined}
                   className="group grid grid-cols-[88px_1fr] items-center gap-5"
                 >
                   <div className="relative aspect-[1.25/1] overflow-hidden rounded-xl bg-muted">
-                    <Image
-                      src={video.image}
-                      alt=""
-                      fill
-                      className="object-cover transition duration-300 group-hover:scale-105"
-                      sizes="88px"
-                    />
+                    {video.thumbnail ? (
+                      <Image
+                        src={video.thumbnail}
+                        alt=""
+                        fill
+                        className="object-cover transition duration-300 group-hover:scale-105"
+                        sizes="88px"
+                      />
+                    ) : (
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <span className="text-2xl text-muted-foreground">▶</span>
+                      </div>
+                    )}
                   </div>
                   <div>
                     <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-muted-foreground">
-                      {video.meta}
+                      {categoryLabel(video)}
+                      {video.duration ? ` / ${formatDuration(video.duration)}` : ""}
                     </p>
                     <p className="mt-1.5 font-serif text-lg leading-snug text-dark transition-colors duration-300 group-hover:text-tan">
                       {video.title}

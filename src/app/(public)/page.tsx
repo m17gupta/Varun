@@ -30,7 +30,7 @@ export default function HomePage() {
       <HeroSection />
       <PodcastInviteSection />
       <QuoteSection />
-      <EssaysSection />
+      {/* <EssaysSection /> */}
       <BooksSection />
       <VideosPodcastSection />
       <ArchiveCtaSection />

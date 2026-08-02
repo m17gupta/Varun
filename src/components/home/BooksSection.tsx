@@ -1,10 +1,11 @@
 "use client"
 
-import { useRef } from "react"
+import { useEffect, useRef } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { motion, useInView } from "framer-motion"
-import { books } from "@/data/home"
+import { useAppDispatch, useAppSelector } from "@/lib/store/hooks"
+import { fetchBooksThunk } from "@/lib/store/books/booksThunks"
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -27,6 +28,15 @@ export function BooksSection() {
   const ref = useRef<HTMLElement>(null)
   const isInView = useInView(ref, { once: true, margin: "-80px" })
 
+  const { isFetchedBooks, books } = useAppSelector((state) => state.books)
+  const dispatch = useAppDispatch()
+
+  // get all books 
+  useEffect(()=>{
+     if (!isFetchedBooks){
+      dispatch(fetchBooksThunk())
+     }
+  },[isFetchedBooks, dispatch])
   return (
     <section ref={ref} className="bg-dark-gray px-6 py-16 text-card sm:py-24 lg:px-12">
       <div className="mx-auto max-w-[1400px]">
@@ -60,15 +70,19 @@ export function BooksSection() {
         >
           {books.map((work) => (
             <motion.article key={work.title} variants={cardItem}>
-              <Link href={work.href} className="group block">
+              <Link href={work.href ?? "/books"} className="group block">
                 <div className="relative aspect-[3/4] overflow-hidden rounded-2xl bg-dark border border-white/5">
-                  <Image
-                    src={work.image}
-                    alt=""
-                    fill
-                    className="object-cover opacity-80 transition duration-500 group-hover:scale-[1.035] group-hover:opacity-100"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                  />
+                  {work.image ? (
+                    <Image
+                      src={work.image}
+                      alt=""
+                      fill
+                      className="object-cover opacity-80 transition duration-500 group-hover:scale-[1.035] group-hover:opacity-100"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    />
+                  ) : (
+                    <div className="absolute inset-0 bg-muted" />
+                  )}
                 </div>
                 <p className="mt-4 text-[10px] font-semibold uppercase tracking-[0.22em] text-white/40">
                   {work.label}

@@ -9,19 +9,10 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 import { Switch } from "@/components/ui/switch"
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select"
 import { ArrowLeft, Loader2 } from "lucide-react"
 import Link from "next/link"
 import { CloudinaryUpload } from "@/components/admin/CloudinaryUpload"
 import type { BookModel } from "@/lib/store/books/booksTypes"
-
-const LABEL_OPTIONS = ["Book 01", "Book 02", "Essay Series", "Research"]
 
 export default function AdminEditBookPage() {
   const router = useRouter()
@@ -145,16 +136,12 @@ export default function AdminEditBookPage() {
             </div>
             <div className="space-y-2">
               <Label htmlFor="label">Label</Label>
-              <Select value={form.label} onValueChange={(val) => val && set("label", val)}>
-                <SelectTrigger id="label">
-                  <SelectValue placeholder="Select a label" />
-                </SelectTrigger>
-                <SelectContent>
-                  {LABEL_OPTIONS.map((opt) => (
-                    <SelectItem key={opt} value={opt}>{opt}</SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
+              <Input
+                id="label"
+                value={form.label}
+                onChange={(e) => set("label", e.target.value)}
+                required
+              />
             </div>
             <div className="space-y-2">
               <Label htmlFor="href">Link Destination</Label>

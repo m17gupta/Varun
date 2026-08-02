@@ -9,10 +9,10 @@ import {
   LayoutDashboard,
   FileText,
   Users,
-  Mail,
   BarChart3,
   Menu,
   BookOpen,
+  Video,
 } from "lucide-react"
 import { useDispatch, useSelector } from "react-redux"
 import { RootState } from "@/lib/store/store"
@@ -21,7 +21,7 @@ const navItems = [
   { label: "Overview", href: "/admin", icon: LayoutDashboard },
   { label: "Books", href: "/admin/books", icon: FileText },
   { label: "Users", href: "/admin/members", icon: Users },
-  { label: "Videos", href: "/admin/videos", icon: Mail },
+  { label: "Videos", href: "/admin/videos", icon: Video },
   { label: "Analytics", href: "/admin/analytics", icon: BarChart3 },
 ]
 

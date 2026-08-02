@@ -68,6 +68,7 @@ export function HeroSection() {
             alt="Mandala Background"
             fill
             className="object-contain opacity-75"
+            sizes="600px"
           />
         </div>
       </motion.div>
@@ -153,6 +154,7 @@ export function HeroSection() {
                 alt="Decorative Mandala"
                 fill
                 className="object-cover opacity-80"
+                sizes="(max-width: 1024px) 192px, 256px"
               />
             </div>
           </motion.div>
@@ -169,6 +171,7 @@ export function HeroSection() {
                 alt="Decorative Mandala Small"
                 fill
                 className="object-cover opacity-80"
+                sizes="(max-width: 1024px) 96px, 128px"
               />
             </div>
           </motion.div>

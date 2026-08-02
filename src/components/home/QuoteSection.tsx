@@ -47,6 +47,7 @@ export function QuoteSection() {
           alt="Mandala Background"
           fill
           className="object-contain"
+          sizes="400px"
         />
       </div>
 
