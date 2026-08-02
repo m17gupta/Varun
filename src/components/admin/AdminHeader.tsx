@@ -11,6 +11,8 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import { LogOut, User } from "lucide-react"
+import { useAppDispatch } from "@/lib/store/hooks"
+import { logout } from "@/lib/store/auth/authSlice"
 
 interface AdminHeaderProps {
   user: {
@@ -21,6 +23,7 @@ interface AdminHeaderProps {
 }
 
 export function AdminHeader({ user }: AdminHeaderProps) {
+  const dispatch = useAppDispatch()
   const initials = user.name
     ? user.name
         .split(" ")
@@ -46,7 +49,7 @@ export function AdminHeader({ user }: AdminHeaderProps) {
           <DropdownMenuContent align="end" className="w-48">
             <DropdownMenuLabel>
               <div className="flex flex-col">
-                <span className="text-sm font-medium">{user.name}</span>
+                <span className="text-sm font-medium text-foreground">{user.name}</span>
                 <span className="text-xs text-muted-foreground">{user.email}</span>
               </div>
             </DropdownMenuLabel>
@@ -57,7 +60,10 @@ export function AdminHeader({ user }: AdminHeaderProps) {
             </DropdownMenuItem>
             <DropdownMenuSeparator />
             <DropdownMenuItem
-              onClick={() => signOut({ callbackUrl: "/login" })}
+              onClick={async () => {
+                dispatch(logout())
+                await signOut({ callbackUrl: "/login" })
+              }}
               className="text-destructive"
             >
               <LogOut className="size-4" />

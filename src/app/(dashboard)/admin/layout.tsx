@@ -2,6 +2,7 @@ import { auth } from "@/lib/auth"
 import { redirect } from "next/navigation"
 import { AdminSidebar } from "@/components/admin/AdminSidebar"
 import { AdminHeader } from "@/components/admin/AdminHeader"
+import { SessionHydrator } from "@/components/admin/SessionHydrator"
 import config from "@/config/pages/admin.json"
 import type { Metadata } from "next"
 
@@ -23,6 +24,7 @@ export default async function AdminLayout({ children }: { children: React.ReactN
 
   return (
     <div className="flex min-h-screen">
+      <SessionHydrator />
       <AdminSidebar />
       <div className="flex flex-1 flex-col">
         <AdminHeader user={session.user} />

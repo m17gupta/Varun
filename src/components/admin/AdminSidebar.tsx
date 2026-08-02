@@ -14,8 +14,9 @@ import {
   BookOpen,
   Video,
 } from "lucide-react"
-import { useDispatch, useSelector } from "react-redux"
+import { useSelector } from "react-redux"
 import { RootState } from "@/lib/store/store"
+import { SignOutButton } from "./SignOutButton"
 
 const navItems = [
   { label: "Overview", href: "/admin", icon: LayoutDashboard },
@@ -54,9 +55,7 @@ function SidebarNav() {
 }
 
 export function AdminSidebar() {
-
-  const dispatch= useDispatch()
-  const {user}= useSelector((state:RootState)=>state.auth)
+  const { user } = useSelector((state: RootState) => state.auth)
   return (
     <>
       {/* Desktop sidebar */}
@@ -68,6 +67,9 @@ export function AdminSidebar() {
         <ScrollArea className="flex-1 px-3 py-4">
           <SidebarNav />
         </ScrollArea>
+        <div className="border-t px-3 py-3">
+          <SignOutButton />
+        </div>
       </aside>
 
       {/* Mobile sidebar */}
@@ -84,6 +86,9 @@ export function AdminSidebar() {
           <ScrollArea className="flex-1 px-3 py-4">
             <SidebarNav />
           </ScrollArea>
+          <div className="border-t px-3 py-3">
+            <SignOutButton />
+          </div>
         </SheetContent>
       </Sheet>
     </>
